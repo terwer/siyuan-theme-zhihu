@@ -1,4 +1,4 @@
-# zhi-ts-template
+# zhi-mini
 
 a mini yet powerful siyuan-note theme
 

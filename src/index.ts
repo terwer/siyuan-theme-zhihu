@@ -3,16 +3,23 @@
  * Hello World
  */
 
+import Hello from "~/src/hello/hello"
+
 /**
- * Hello
+ * 主题核心启动类
  *
  * @public
  */
-class Hello {
-  private hello() {
-    const msg = "Hello World"
-    console.log(msg)
+class Theme {
+  private hello: Hello
+
+  constructor() {
+    this.hello = new Hello()
+  }
+
+  welcome() {
+    this.hello.hello()
   }
 }
 
-export default Hello
+export default Theme

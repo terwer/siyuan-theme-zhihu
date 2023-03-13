@@ -1,7 +1,9 @@
 import { describe, it } from "vitest"
+import Theme from "~/src"
 
 describe("test index", () => {
   it("test hello", function () {
-    console.log("hello")
+    const theme = new Theme()
+    theme.welcome()
   })
 })

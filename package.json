@@ -2,7 +2,10 @@
   "name": "zhi-mini",
   "version": "0.0.1",
   "description": "a mini yet powerful siyuan-note theme",
-  "files": ["lib", "typings"],
+  "files": [
+    "lib",
+    "typings"
+  ],
   "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
