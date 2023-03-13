@@ -832,6 +832,9 @@ body {
   padding: 0;
   color: var(--zhi-text-color);
 }
+body .b3-label {
+  line-height: 22px;
+}
 html[data-theme-mode="light"] {
   --zhi-code-tab-bg: #fff;
   --zhi-code-content-bg: #f8f9fa;
