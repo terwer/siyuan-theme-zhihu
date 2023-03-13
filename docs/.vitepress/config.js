@@ -1,10 +1,10 @@
 import { getSideBar } from "vitepress-plugin-autobar"
 export default {
-  title: "helpdoc", // 设置网站标题
-  description: "a online helpdoc",
+  title: "Zhi mini", // 设置网站标题
+  description: "a mini yet powerful siyuan-note theme",
   base: "/", // 设置站点根路径
   outDir: "./.vitepress/dist", // 设置输出目录
-  repo: "https://github.com/terwer/zhi-env", // 添加 git 链接
+  repo: "https://github.com/terwer/zhi-mini", // 添加 git 链接
   markdown: {
     toc: { includeLevel: [2, 3] },
   },
@@ -12,7 +12,7 @@ export default {
     // 添加导航栏
     nav: [
       {
-        text: "helpdoc",
+        text: "Home",
         link: "/",
         target: "_self",
       },
