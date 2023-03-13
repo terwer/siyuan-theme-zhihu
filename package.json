@@ -19,6 +19,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "watch:css": "stylus --watch theme.styl --out ./theme.css",
+    "build:css": "stylus --compress theme.styl --out ./theme.css",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .ts ./src",
@@ -29,11 +31,12 @@
     "typings": "python script/typings.py",
     "clean": "python script/clean.py",
     "ci": "python script/ci.py",
+    "package:vercel": "bash script/package.sh",
     "package": "python script/package.py",
     "template": "python script/template.py -b",
     "restore": "python script/template.py -r",
     "helpdoc": "jsdoc2vitepress start",
-    "vitepress:api": "mkdir -p etc && mkdir -p temp && api-extractor run --local",
+    "vitepress:api": "api-extractor run --local",
     "vitepress:prepare": "api-documenter markdown -i temp -o docs/doc",
     "vitepress:dev": "vitepress dev docs",
     "vitepress:build": "vitepress build docs"

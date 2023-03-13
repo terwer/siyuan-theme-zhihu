@@ -1,0 +1,9 @@
+#preview .protyle-action__language {
+  right: 0.2rem !important;
+}
+#preview .protyle-action__language::after {
+  display: none !important;
+}
+#preview .protyle-action__copy {
+  display: none !important;
+}
