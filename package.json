@@ -19,6 +19,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "watch:css": "stylus --watch theme.styl --out ./theme.css",
+    "build:css": "stylus --compress theme.styl --out ./theme.css",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .ts ./src",

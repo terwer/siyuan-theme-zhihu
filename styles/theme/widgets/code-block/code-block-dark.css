@@ -1,0 +1,4 @@
+html[data-theme-mode="dark"] {
+  --zhi-code-tab-bg: _code-tab-bg-dark;
+  --zhi-code-content-bg: _code-content-bg-dark;
+}
