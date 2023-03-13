@@ -22,5 +22,5 @@
     }
   },
   "include": [".eslintrc.cjs", "./**/*.ts", "*.ts"],
-  "exclude": [".github", "node_modules", "lib/**/*"]
+  "exclude": [".github", "node_modules", "lib/**/*", "theme.js"]
 }

@@ -18,6 +18,8 @@ module.exports = {
     extraFileExtensions: [".vue"],
   },
 
+  ignorePatterns: ["node_modules/", ".vercel/", ".idea/", "*.js", "*.d.ts", "*.map"],
+
   plugins: ["@typescript-eslint", "prettier"],
 
   extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],

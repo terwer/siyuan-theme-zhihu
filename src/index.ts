@@ -17,7 +17,12 @@ class Theme {
     this.hello = new Hello()
   }
 
-  welcome() {
+  /**
+   * 主流程加载
+   *
+   * @param runAs 运行模式
+   */
+  public async init(runAs?: any): Promise<void> {
     this.hello.hello()
   }
 }

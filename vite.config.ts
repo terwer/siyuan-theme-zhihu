@@ -14,11 +14,11 @@ export default defineConfig({
     ],
   },
   build: {
-    outDir: "lib",
+    outDir: ".",
     lib: {
-      entry: [path.resolve(__dirname, "src/index.ts")],
-      formats: ["es", "cjs"],
-      name: "index",
+      entry: [path.resolve(__dirname, "theme.ts")],
+      formats: ["cjs"],
+      name: "theme",
     },
     rollupOptions: {
       output: {
@@ -26,4 +26,5 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: false,
 })
