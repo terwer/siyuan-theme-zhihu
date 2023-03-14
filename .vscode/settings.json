@@ -4,7 +4,7 @@
   "files.associations": { "*.json": "jsonc" },
 
   // Copyright Inserter
-  "copyrightInserter.holder":"Terwer. All rights reserved.",
-  "copyrightInserter.license": "gpl3",
+  "copyrightInserter.holder": "Terwer. All rights reserved.",
+  "copyrightInserter.license": "gpl3"
   // "copyrightInserter.year": ""
 }

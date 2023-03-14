@@ -31,7 +31,7 @@ export default defineConfig({
     ],
   },
   build: {
-    outDir: ".",
+    outDir: "lib",
     lib: {
       entry: [path.resolve(__dirname, "theme.ts")],
       formats: ["cjs"],
@@ -39,8 +39,10 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
+        esModule: "if-default-prop",
         exports: "named",
       },
+      external: ["siyuan"],
     },
   },
 })

@@ -13,7 +13,6 @@ class HackPluginSystem {
 
   constructor() {
     const zhiSdk = ZhiUtil.zhiSdk()
-
     this.logger = zhiSdk.getLogger()
     this.common = zhiSdk.common
     this.siyuanApi = zhiSdk.siyuanApi
@@ -44,8 +43,23 @@ class HackPluginSystem {
 
     try {
       this.logger.info("Undetected plugin system，initiating plugin system...")
+
+      const fs = this.common.electronUtil.requireLib("fs")
+      const path = this.common.electronUtil.requireLib("path")
+      const data = fs.readFileSync(
+        path.join(this.common.electronUtil.getCrossPlatformAppDataFolder(), ".siyuan", "plugin.js")
+      )
+      const script = data.toString("utf8")
+      this.logger.info("Local plugin system found, loading...")
+      eval(script)
     } catch (e) {
-      this.logger.info("Local plugin system not found, load online", e)
+      this.logger.info("Local plugin system not found, load online")
+      this.logger.debug("Plugin system Load error", e)
+
+      const res = await fetch("https://gitee.com/zuoez02/siyuan-plugin-system/raw/main/main.js", { cache: "no-cache" })
+      const sc = await res.text()
+      this.siyuanApi.siyuanUtil.siyuanWindow().siyuanPluginScript = sc
+      eval(sc)
     }
 
     const sys = this.getPluginSystem()

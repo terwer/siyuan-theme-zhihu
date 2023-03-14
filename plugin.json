@@ -1,0 +1,7 @@
+[
+  {
+    "entry": "./src/zhi-plugins/zhi-picture-plugin/main.ts",
+    "name": "ZhiPicturePlugin",
+    "fileName": "zhi-picture-plugin"
+  }
+]

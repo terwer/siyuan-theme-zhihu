@@ -18,7 +18,7 @@ module.exports = {
     extraFileExtensions: [".vue"],
   },
 
-  ignorePatterns: ["node_modules/", ".vercel/", ".idea/", "*.js", "*.d.ts", "*.map"],
+  ignorePatterns: ["node_modules/", ".vercel/", ".idea/", "*.js", "*.d.ts", "*.mts", "*.map"],
 
   plugins: ["@typescript-eslint", "prettier"],
 

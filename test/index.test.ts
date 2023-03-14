@@ -1,9 +1,9 @@
 import { describe, it } from "vitest"
-import Theme from "~/src"
+import Theme from "~/src/index"
 
-describe("test index", () => {
-  it("test hello", function () {
+describe("test theme", () => {
+  it("test main", async () => {
     const theme = new Theme()
-    theme.welcome()
+    await theme.init("node")
   })
 })
