@@ -1,5 +1,10 @@
 {
   "python.formatting.provider": "black",
   "stylelint.validate": ["stylus"],
-  "files.associations": { "*.json": "jsonc" }
+  "files.associations": { "*.json": "jsonc" },
+
+  // Copyright Inserter
+  "copyrightInserter.holder":"Terwer. All rights reserved.",
+  "copyrightInserter.license": "gpl3",
+  // "copyrightInserter.year": ""
 }
