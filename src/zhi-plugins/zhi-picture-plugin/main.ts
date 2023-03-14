@@ -32,13 +32,10 @@ class ZhiPicturePlugin extends siyuan.Plugin {
 
   constructor() {
     super()
-
     const zhiSdk = ZhiUtil.zhiSdk()
-
     this.logger = zhiSdk.getLogger()
 
     this.translucify = new Translucify().init()
-    this.logger.info("ZhiPicturePlugin created")
   }
 
   onload() {
