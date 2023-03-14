@@ -15,21 +15,28 @@
  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-/// <reference types="vite/client" />
+import DependencyItem from "~/src/models/DependencyItem"
+import PluginSystemHook from "~/src/plugin-system/plugin-system-hook"
 
 /**
- * 预定义的环境变量
+ * 插件系统
  *
  * @author terwer
  * @since 1.0.0
  */
-interface ImportMetaEnv {
-  VITE_LOG_STACK_SIZE: number
+class PluginSystem {
+  /**
+   * 插件系统注册
+   *
+   * @author terwer
+   * @since 1.0.0
+   */
+  public async initPluginSystem(): Promise<DependencyItem[]> {
+    const pluginSystemHook = new PluginSystemHook()
+    await pluginSystemHook.init()
+    return Promise.resolve([])
+  }
 }
 
-/**
- * 环境变量定义
- */
-interface ImportMeta {
-  readonly env: ImportMetaEnv
-}
+const pluginSystem = new PluginSystem()
+export default pluginSystem

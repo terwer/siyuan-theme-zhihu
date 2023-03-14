@@ -1,6 +1,18 @@
-/**
- * @packageDocumentation
- * zhi-mini 一款简洁、强大的思源笔记主题
+/*
+ Copyright (c) 2023 Terwer. All rights reserved.
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 import ZhiUtil from "~/src/utils/ZhiUtil"
@@ -40,7 +52,7 @@ class Theme {
       for (const item of dynamicImports) {
         const libpath = item.libpath
         // 类型校验
-        if (item.format !== "cjs" || !libpath.includes(".cjs")) {
+        if (item.format !== "cjs" && item.format !== "js") {
           this.logger.warn("Only cjs supported, skip this lib!", libpath)
           continue
         }
@@ -59,8 +71,8 @@ class Theme {
 
         let lib
         if (this.common.browserUtil.isInBrowser) {
-          const importPath = path.join(this.siyuanApi.siyuanUtil.ZHI_THEME_DIST_PATH(), libpath)
-          lib = this.siyuanApi.siyuanUtil.requireLib(importPath)
+          const importPath = this.common.electronUtil.joinPath(this.common.electronUtil.zhiMiniPath(), libpath)
+          lib = this.common.electronUtil.requireLib(importPath)
         }
 
         // 如果有初始化方法，进行初始化
