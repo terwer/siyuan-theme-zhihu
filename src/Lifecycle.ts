@@ -16,7 +16,7 @@
  */
 
 import DependencyItem from "~/src/models/DependencyItem"
-import fontAwesome from "~/src/vendor/font-awesome"
+import pluginSystem from "./plugin-system"
 
 /**
  * zhi主题统一生命周期管理
@@ -31,12 +31,12 @@ class Lifecycle {
     return this._dynamicImports
   }
 
-  public load() {
+  public async load() {
     const allImports = <DependencyItem[]>[]
 
-    const pluginSystemImports = this.loadPluginSystem()
-    const widgetsImports = this.loadWidgets()
-    const vendorImports = this.loadVendors()
+    const pluginSystemImports = await this.loadPluginSystem()
+    const widgetsImports = await this.loadWidgets()
+    const vendorImports = await this.loadVendors()
 
     this._dynamicImports = allImports.concat(pluginSystemImports).concat(widgetsImports).concat(vendorImports)
   }
@@ -46,8 +46,8 @@ class Lifecycle {
    *
    * @private
    */
-  private loadPluginSystem(): DependencyItem[] {
-    return []
+  private async loadPluginSystem(): Promise<DependencyItem[]> {
+    return await pluginSystem.initPluginSystem()
   }
 
   /**
@@ -55,8 +55,8 @@ class Lifecycle {
    *
    * @private
    */
-  private loadWidgets(): DependencyItem[] {
-    return []
+  private async loadWidgets(): Promise<DependencyItem[]> {
+    return Promise.resolve([])
   }
 
   /**
@@ -64,12 +64,13 @@ class Lifecycle {
    *
    * @private
    */
-  private loadVendors(): DependencyItem[] {
-    const vendorImports = <DependencyItem[]>[]
+  private async loadVendors(): Promise<DependencyItem[]> {
+    // const vendorImports = <DependencyItem[]>[]
 
-    // 字体图标
-    const fontAwesomeImports = fontAwesome.initFontAwesome()
-    return vendorImports.concat(fontAwesomeImports)
+    // // 字体图标
+    // const fontAwesomeImports = fontAwesome.initFontAwesome()
+    // return Promise.resolve(vendorImports.concat(fontAwesomeImports))
+    return Promise.resolve([])
   }
 }
 

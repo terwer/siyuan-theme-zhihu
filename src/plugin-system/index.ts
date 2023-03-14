@@ -15,29 +15,28 @@
  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import Lifecycle from "~/src/Lifecycle"
 import DependencyItem from "~/src/models/DependencyItem"
+import PluginSystemHook from "~/src/plugin-system/plugin-system-hook"
 
 /**
- * zhi主题唯一激活入口
+ * 插件系统
  *
  * @author terwer
  * @since 1.0.0
  */
-class Bootstrap {
-  private static lifecycle: Lifecycle
-
-  static {
-    Bootstrap.lifecycle = new Lifecycle()
-  }
-
+class PluginSystem {
   /**
-   * 主题激活
+   * 插件系统注册
+   *
+   * @author terwer
+   * @since 1.0.0
    */
-  public static async start(): Promise<DependencyItem[]> {
-    await Bootstrap.lifecycle.load()
-    return Promise.resolve(Bootstrap.lifecycle.dynamicImports)
+  public async initPluginSystem(): Promise<DependencyItem[]> {
+    const pluginSystemHook = new PluginSystemHook()
+    await pluginSystemHook.init()
+    return Promise.resolve([])
   }
 }
 
-export default Bootstrap
+const pluginSystem = new PluginSystem()
+export default pluginSystem
