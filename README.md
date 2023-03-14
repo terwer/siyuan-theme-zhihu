@@ -7,6 +7,18 @@ a mini yet powerful siyuan-note theme
 
 ## Useful scripts
 
+### Develop css
+
+```bash
+pnpm watch:css
+```
+
+### Develop js
+
+```bash
+pnpm dev
+```
+
 ### Build
 
 ```bash
