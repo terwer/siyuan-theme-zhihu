@@ -52,7 +52,7 @@ class Theme {
       for (const item of dynamicImports) {
         const libpath = item.libpath
         // 类型校验
-        if (item.format !== "cjs" || !libpath.includes(".cjs")) {
+        if (item.format !== "cjs" && item.format !== "js") {
           this.logger.warn("Only cjs supported, skip this lib!", libpath)
           continue
         }
@@ -71,8 +71,8 @@ class Theme {
 
         let lib
         if (this.common.browserUtil.isInBrowser) {
-          const importPath = path.join(this.siyuanApi.siyuanUtil.ZHI_THEME_DIST_PATH(), libpath)
-          lib = this.siyuanApi.siyuanUtil.requireLib(importPath)
+          const importPath = this.common.electronUtil.joinPath(this.common.electronUtil.zhiMiniPath(), libpath)
+          lib = this.common.electronUtil.requireLib(importPath)
         }
 
         // 如果有初始化方法，进行初始化

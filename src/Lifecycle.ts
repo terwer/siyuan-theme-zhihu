@@ -16,6 +16,7 @@
  */
 
 import DependencyItem from "~/src/models/DependencyItem"
+import fontAwesome from "~/src/vendor/font-awesome"
 
 /**
  * zhi主题统一生命周期管理
@@ -64,7 +65,11 @@ class Lifecycle {
    * @private
    */
   private loadVendors(): DependencyItem[] {
-    return []
+    const vendorImports = <DependencyItem[]>[]
+
+    // 字体图标
+    const fontAwesomeImports = fontAwesome.initFontAwesome()
+    return vendorImports.concat(fontAwesomeImports)
   }
 }
 

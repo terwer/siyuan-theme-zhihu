@@ -49,5 +49,4 @@ class Zhi {
   }
 }
 
-// 默认支持esm
 export default Zhi
