@@ -23,32 +23,21 @@
  * questions.
  */
 
-import ZhiSdk from "zhi-sdk"
-import Env from "zhi-env"
+/// <reference types="vite/client" />
 
 /**
- * 工具类统一入口
+ * 预定义的环境变量
  *
- * @public
  * @author terwer
  * @since 1.0.0
  */
-class ZhiUtil {
-  private static zhiSdkObj: ZhiSdk
-
-  /**
-   * 获取 zhi-sdk 实例
-   */
-  public static zhiSdk() {
-    if (!ZhiUtil.zhiSdkObj) {
-      const env = new Env(import.meta.env)
-      ZhiUtil.zhiSdkObj = new ZhiSdk(env)
-      // const logger = ZhiUtil.zhiSdkObj.getLogger()
-      // const common = ZhiUtil.zhiSdkObj.common
-      // logger.debug(common.strUtil.f("ZhiSdk inited, components are available now,like logger, env and so on."))
-    }
-    return ZhiUtil.zhiSdkObj
-  }
+interface ImportMetaEnv {
+  VITE_LOG_STACK_SIZE: number
 }
 
-export default ZhiUtil
+/**
+ * 环境变量定义
+ */
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}

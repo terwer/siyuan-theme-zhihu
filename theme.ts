@@ -1,5 +1,6 @@
 import Theme from "~/src"
 import zhiUtil from "~/src/utils/ZhiUtil"
+import callsites from "callsites"
 
 /**
  * @packageDocumentation
@@ -9,20 +10,25 @@ import zhiUtil from "~/src/utils/ZhiUtil"
   const zhiSdk = zhiUtil.zhiSdk()
   const logger = zhiSdk.getLogger()
   const env = zhiSdk.getEnv()
-  logger.debug("loglevel=>", env.getStringEnv("VITE_LOG_LEVEL"))
-  logger.debug("isNodeDev=>", env.isNodeDev())
-  logger.info("isDev=>", env.isDev())
 
   const loadTheme = async () => {
     logger.info("Theme is loading...")
     const theme = new Theme()
     await theme.init("electron")
+    logger.info("Theme loaded.")
   }
 
   if (env.isDev()) {
-    const devEntry = "http://localhost:5173/theme.ts"
-    await import(devEntry)
-    await loadTheme()
+    const cs = callsites()
+    const FROM_THEME_JS = "theme.js"
+    const firstCall = cs.length > 0 ? cs[0].getFileName() ?? FROM_THEME_JS : FROM_THEME_JS
+    if (firstCall.includes(FROM_THEME_JS)) {
+      const devEntry = "http://localhost:5173/theme.ts"
+      await import(devEntry)
+      // logger.debug("First load, load devEntry only")
+    } else {
+      await loadTheme()
+    }
   } else {
     await loadTheme()
   }
