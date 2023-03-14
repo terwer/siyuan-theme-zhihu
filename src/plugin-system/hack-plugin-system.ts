@@ -13,7 +13,6 @@ class HackPluginSystem {
 
   constructor() {
     const zhiSdk = ZhiUtil.zhiSdk()
-
     this.logger = zhiSdk.getLogger()
     this.common = zhiSdk.common
     this.siyuanApi = zhiSdk.siyuanApi

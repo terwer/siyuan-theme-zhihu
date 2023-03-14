@@ -19,6 +19,11 @@ import ZhiUtil from "~/src/utils/ZhiUtil"
 import Zhi from "~/src/zhi"
 
 /**
+ * @packageDocumentation
+ * zhi-mini 一款简洁、强大的思源笔记主题
+ */
+
+/**
  * 主题通用类（由theme.js动态调用，除了单元测试之外请勿主动调用）
  *
  * @public
@@ -43,7 +48,7 @@ class Theme {
   /**
    * 主流程加载
    *
-   * @param runAs 运行模式
+   * @param runAs - 运行模式
    */
   public async init(runAs?: string): Promise<void> {
     try {

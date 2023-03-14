@@ -12,9 +12,6 @@ class PluginSystemHook {
   private readonly common
   private readonly siyuanApi
 
-  private readonly fs
-  private readonly path
-
   private readonly hack
 
   constructor() {
