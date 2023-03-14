@@ -6,6 +6,9 @@ node_modules
 lib
 typings
 vite*.mjs
+*.d.ts
+!vite-env.d.ts
+*.ts.map
 
 # Docs
 etc
