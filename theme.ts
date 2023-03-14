@@ -15,7 +15,7 @@
  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import Theme from "~/src"
+import Theme from "~/src/index"
 import zhiUtil from "~/src/utils/ZhiUtil"
 import callsites from "callsites"
 

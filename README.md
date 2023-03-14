@@ -5,6 +5,10 @@ a mini yet powerful siyuan-note theme
 ![version](https://img.shields.io/github/release/terwer/zhi-mini.svg?style=flat-square)
 ![license](https://img.shields.io/badge/license-GPL-blue.svg?style=popout-square)
 
+## Recommand IDE
+
+vscode
+
 ## Useful scripts
 
 ### Develop css
