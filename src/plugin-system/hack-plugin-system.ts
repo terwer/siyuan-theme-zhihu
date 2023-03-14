@@ -1,3 +1,20 @@
+/*
+ Copyright (c) 2023 Terwer. All rights reserved.
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 import ZhiUtil from "~/src/utils/ZhiUtil"
 
 /**
@@ -11,11 +28,85 @@ class HackPluginSystem {
   private readonly common
   private readonly siyuanApi
 
+  public readonly ZHI_PLUGIN_FOLDER = "zhi-plugins"
+  public readonly PLUGIN_FOLDER = "plugins"
+  public readonly MANIFEST = "manifest.json"
+  public OLD_VERSION_ZERO = "0.0.0"
+  private readonly SCRIPT = "main.js"
+
   constructor() {
     const zhiSdk = ZhiUtil.zhiSdk()
     this.logger = zhiSdk.getLogger()
     this.common = zhiSdk.common
     this.siyuanApi = zhiSdk.siyuanApi
+  }
+
+  isDir(p: any) {
+    const fs = this.common.electronUtil.requireLib("fs")
+
+    return fs.statSync(p).isDirectory()
+  }
+
+  isExists(p: any) {
+    try {
+      const fs = this.common.electronUtil.requireLib("fs")
+
+      fs.statSync(p)
+      return true
+    } catch (e) {
+      return false
+    }
+  }
+
+  getFileContent = async (f: any) => {
+    const fs = this.common.electronUtil.requireLib("fs")
+
+    return new Promise((resolve, reject) => {
+      fs.readFile(f, (err: any, data: any) => {
+        if (err) {
+          reject(err)
+          return
+        }
+        return resolve(data.toString("utf8"))
+      })
+    })
+  }
+
+  getManifest = async (manifest: any) => {
+    const content: any = await this.getFileContent(manifest)
+    try {
+      return JSON.parse(content)
+    } catch (e) {
+      this.logger.error("Lading manifest: " + manifest, e)
+      return null
+    }
+  }
+
+  async scanPlugins(pluginFolder: string) {
+    const that = this
+    const fs = this.common.electronUtil.requireLib("fs")
+    const path = this.common.electronUtil.requireLib("path")
+
+    return new Promise((resolve, reject) => {
+      fs.readdir(pluginFolder, (err: any, files: any) => {
+        if (err) {
+          that.logger.error(err)
+          resolve([])
+          return
+        }
+        resolve(
+          files
+            .filter((f: any) => {
+              return (
+                this.isDir(path.join(pluginFolder, f)) &&
+                this.isExists(path.join(pluginFolder, f, that.MANIFEST)) &&
+                this.isExists(path.join(pluginFolder, f, that.SCRIPT))
+              )
+            })
+            ?.map((g: any) => path.resolve(pluginFolder, g)) || []
+        )
+      })
+    })
   }
 
   /**

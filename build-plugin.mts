@@ -37,7 +37,7 @@ class ZhiBuild {
     const facadeModuleId = chunkInfo.facadeModuleId
     const entryPath = path.dirname(facadeModuleId ?? ".")
     const entryFolder = entryPath.split("/").pop() ?? ""
-    const pluginBasePath = path.join("lib", "zhi-plugins", entryFolder)
+    const pluginBasePath = path.join("lib", "zhi-plugins")
 
     // 复制 manifest.json
     const manifestPath = path.join(entryPath, "manifest.json")
@@ -47,7 +47,8 @@ class ZhiBuild {
       console.log("manifest.json copied.")
     }
 
-    return path.join(pluginBasePath, "main.js")
+    const mainToPath = path.join(pluginBasePath, entryFolder)
+    return path.join(mainToPath, "main.js")
   }
 
   public async processBuild() {
