@@ -5,7 +5,7 @@
  */
 class Hello {
   public hello() {
-    const msg = "Hello World3"
+    const msg = "Hello World"
     console.log(msg)
   }
 }
