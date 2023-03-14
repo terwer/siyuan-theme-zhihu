@@ -33,7 +33,7 @@ class Theme {
    *
    * @param runAs 运行模式
    */
-  public async init(runAs?: any): Promise<void> {
+  public async init(runAs?: string): Promise<void> {
     try {
       // 初始化第三方依赖
       const dynamicImports = await this.zhiTheme.main([])

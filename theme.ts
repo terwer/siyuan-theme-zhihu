@@ -24,7 +24,7 @@ import callsites from "callsites"
     const firstCall = cs.length > 0 ? cs[0].getFileName() ?? FROM_THEME_JS : FROM_THEME_JS
     if (firstCall.includes(FROM_THEME_JS)) {
       const devEntry = "http://localhost:5173/theme.ts"
-      await import(devEntry)
+      await import(/* @vite-ignore */ devEntry)
       // logger.debug("First load, load devEntry only")
     } else {
       await loadTheme()
