@@ -12,10 +12,10 @@ import callsites from "callsites"
   const env = zhiSdk.getEnv()
 
   const loadTheme = async () => {
-    logger.info("Theme is loading...")
+    logger.debug("Theme is loading...")
     const theme = new Theme()
     await theme.init("electron")
-    logger.info("Theme loaded.")
+    logger.debug("Theme loaded.")
   }
 
   if (env.isDev()) {
