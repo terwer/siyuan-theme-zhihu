@@ -17,7 +17,7 @@
 
 import siyuan from "siyuan"
 import ZhiUtil from "~/src/utils/ZhiUtil"
-import Translucify from "~/src/zhi-plugins/zhi-picture-plugin/translucify"
+import Translucify from "~/src/zhi-plugins/zhi-picture/translucify"
 
 /**
  * 图片背景自动透明插件

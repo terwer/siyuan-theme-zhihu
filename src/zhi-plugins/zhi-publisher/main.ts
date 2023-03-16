@@ -17,7 +17,7 @@
 
 import ZhiUtil from "~/src/utils/ZhiUtil"
 import siyuan from "siyuan"
-import PublisherHook from "~/src/zhi-plugins/zhi-publisher-plugin/publisher-hook"
+import PublisherHook from "~/src/zhi-plugins/zhi-publisher/publisher-hook"
 
 /**
  * zhi publisher plugin

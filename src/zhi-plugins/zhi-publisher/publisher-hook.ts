@@ -21,6 +21,7 @@ import ZhiUtil from "~/src/utils/ZhiUtil"
  * 发布工具hook
  */
 class PublisherHook {
+  private readonly REPO_HASH = "1c968d1044aa4d0cfe9be1ad122c2ab5bc1e8e5e"
   private readonly logger
   private common
   private siyuanUtil
@@ -184,11 +185,43 @@ class PublisherHook {
     // 初始化SyCmd配置
     this.initMethods.initCmder("PublisherHook")
   }
+  private async doDownload() {
+    this.logger.warn("Downloading sy-post-publisher from bazaar...")
+    const url = "/api/bazaar/installBazaarWidget"
+    const data = {
+      repoURL: "https://github.com/terwer/sy-post-publisher",
+      packageName: "sy-post-publisher",
+      repoHash: this.REPO_HASH,
+      mode: 0,
+    }
+    const fetchOps = {
+      body: JSON.stringify(data),
+      method: "POST",
+    }
+    const res = await fetch(url, fetchOps)
+    const resJson = await res.json()
+    if (resJson.code == 0) {
+      this.logger.info("Download sy-post-publisher from bazaar success")
+    } else {
+      throw new Error("Download sy-post-publisher error, this plugin will not work!")
+    }
+  }
 
-  init() {
+  public async init() {
     this.logger.info("Initiating sy-post-publisher ...")
     // 统一的初始化入口
     try {
+      const dataDir = this.common.electronUtil.siyuanDataPath()
+      const sypFolder = `${dataDir}/widgets/sy-post-publisher`
+      const fs = this.common.electronUtil.requireLib("fs")
+      this.logger.info("Widget sy-post-publisher folder=>", sypFolder)
+      if (!fs.existsSync(sypFolder)) {
+        this.logger.warn("Widget sy-post-publisher not exist, downloading...")
+        // 下载插件并解压
+        await this.doDownload()
+        this.logger.warn("Widget sy-post-publisher downloaded")
+      }
+
       this.doInit()
     } catch (e) {
       this.logger.warn("Failed to init sy-post-publisher，it may not work in some case.Error=>", e)
