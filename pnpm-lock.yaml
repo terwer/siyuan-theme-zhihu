@@ -29,11 +29,11 @@ specifiers:
   vitepress-plugin-autobar: ^1.0.8
   vitest: ^0.29.2
   vue-eslint-parser: ^9.1.0
-  zhi-sdk: ^1.0.10
+  zhi-sdk: ^1.0.12
 
 dependencies:
   siyuan: 0.3.12
-  zhi-sdk: 1.0.10
+  zhi-sdk: 1.0.12
 
 devDependencies:
   '@microsoft/api-documenter': 7.21.5_@types+node@16.18.14
@@ -7338,22 +7338,22 @@ packages:
       commander: 9.5.0
     dev: true
 
-  /zhi-env/1.8.2:
-    resolution: {integrity: sha512-oMQX540mRNUa7w5IfvZSn06GLsNSK+2WcCBedpHRiA13k755L+1HlL9rAOReWg1xx2n4/2JelpQmiXIv/oHAKg==}
+  /zhi-env/1.10.0:
+    resolution: {integrity: sha512-CqyIOlAV1QZ3SiBZu2UP63OAD+wAxyJ9DW3u1MsEmFwAfBC69IDGXRp5TU33IQ32DWKqm95+CkFoTjb1r87OhQ==}
     dev: false
 
-  /zhi-log/1.5.5:
-    resolution: {integrity: sha512-5/VzI4Jaj106veUc7rQkYdGe9wYI+VLjRpAxPamPPOHqhyiRFMe+lh77xa0TUixq1OLjkHRBu7yfy0FpDrcq+Q==}
+  /zhi-log/1.6.1:
+    resolution: {integrity: sha512-BXXQ2FMqNKFotLLPUDyxtz74ZJl8Ihzxz6ZE8H3dTdc58GW5DLARN4jcyAq4EDGTRyzkrmCMsPG3Gf62tG+1kw==}
     dependencies:
       callsites: 4.0.0
       loglevel: 1.8.1
       loglevel-plugin-prefix: 0.8.4
-      zhi-env: 1.8.2
+      zhi-env: 1.10.0
     dev: false
 
-  /zhi-sdk/1.0.10:
-    resolution: {integrity: sha512-abJc/AjfjcBgw2akhp5Qykk+wagR3uiLJPvgqVbpMDlvboIcb0bP6I6COJl26xZbTBftsyuNlGViYlqoi0UYyw==}
+  /zhi-sdk/1.0.12:
+    resolution: {integrity: sha512-MOwHvADEFrMOJV6a/y/qMdgTSDtBmMX7wlzA4YxhUgyMjKc1WhSL0lveo06owdD5zXgVrsIM8Qvc01HBzRJYHg==}
     dependencies:
       compare-versions: 6.0.0-rc.1
-      zhi-log: 1.5.5
+      zhi-log: 1.6.1
     dev: false

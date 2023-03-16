@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "siyuan": "^0.3.12",
-    "zhi-sdk": "^1.0.10"
+    "zhi-sdk": "^1.0.12"
   },
   "repository": "terwer/zhi-mini",
   "homepage": "https://terwer.space",
