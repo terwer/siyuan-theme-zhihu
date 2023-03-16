@@ -13,5 +13,10 @@
     "entry": "./src/zhi-plugins/zhi-publisher/main.ts",
     "name": "ZhiPublisher",
     "fileName": "zhi-publisher"
+  },
+  {
+    "entry": "./src/zhi-plugins/zhi-code-block/main.ts",
+    "name": "ZhiCodeBlock",
+    "fileName": "zhi-code-block"
   }
 ]

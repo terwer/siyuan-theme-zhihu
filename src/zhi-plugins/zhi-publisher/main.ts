@@ -37,8 +37,8 @@ class ZhiPublisherPlugin extends siyuan.Plugin {
     this.publisherHook = new PublisherHook()
   }
 
-  onload() {
-    this.publisherHook.init()
+  async onload() {
+    await this.publisherHook.init()
     this.logger.info("ZhiPublisherPlugin loaded")
   }
 

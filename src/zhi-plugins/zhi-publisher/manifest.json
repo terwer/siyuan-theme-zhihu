@@ -5,5 +5,5 @@
   "author": "terwer",
   "url": "https://github.com/terwer/zhi-mini/src/zhi-plugins/zhi-publisher",
   "version": "1.0.2",
-  "forceUpdate": true
+  "forceUpdate": false
 }
