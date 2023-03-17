@@ -26,6 +26,8 @@
 import siyuan from "siyuan"
 import ZhiUtil from "~/src/utils/ZhiUtil"
 
+import "./main.styl"
+
 class ZhiCodeBlockPlugin extends siyuan.Plugin {
   private readonly logger
 
@@ -36,6 +38,24 @@ class ZhiCodeBlockPlugin extends siyuan.Plugin {
   }
 
   onload() {
+    // 使用 css 适配了，下面的不再需要
+    // setTimeout(() => {
+    //   // 获取自定义属性值
+    //   const themeLight = document.querySelector("html")?.getAttribute("data-light-theme")
+    //   this.logger.info("Found theme=>", themeLight)
+    //
+    //   // 适配 Rem Craft
+    //   if (themeLight === "Rem Craft") {
+    //     // 获取具有 .my-class 类的所有元素
+    //     const elements = document.querySelectorAll(
+    //       ".b3-typography .code-block .protyle-action .protyle-action__language,.protyle-wysiwyg .code-block .protyle-action .protyle-action__language"
+    //     )
+    //     // 迭代每个元素并设置样式
+    //     elements.forEach((element: any) => {
+    //       element.style.right = "5rem"
+    //     })
+    //   }
+    // }, 3000)
     this.logger.info("ZhiCodeBlockPlugin loaded")
   }
 

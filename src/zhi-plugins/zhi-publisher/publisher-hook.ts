@@ -44,7 +44,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.JsonLocalStorage) {
-        this.logger.warn("JsonLocalStorage loaded, ignore.", entryName)
+        this.logger.debug("JsonLocalStorage loaded, ignore.", entryName)
         return
       }
 
@@ -76,7 +76,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.customstyle) {
-        this.logger.warn("customstyle loaded, ignore.", entryName)
+        this.logger.debug("customstyle loaded, ignore.", entryName)
         return
       }
 
@@ -95,7 +95,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.syp) {
-        console.warn("syp已挂载，忽略", entryName)
+        this.logger.debug("syp已挂载，忽略", entryName)
         return
       }
 
@@ -118,7 +118,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.SyPicgo) {
-        console.warn("SyPicgo loaded, ignore.", entryName)
+        this.logger.debug("SyPicgo loaded, ignore.", entryName)
         return
       }
 
@@ -137,7 +137,7 @@ class PublisherHook {
       const picgo_cfg_070 = picgoExtension.joinPath(picgo_cfg_folder_070, picgo_cfg_070_file)
 
       picgoExtension.upgradeCfg(picgo_cfg_067, picgo_cfg_folder_070, picgo_cfg_070_file)
-      this.logger.warn("PicGO配置文件初始化为=>", picgo_cfg_070)
+      this.logger.debug("PicGO配置文件初始化为=>", picgo_cfg_070)
 
       // 初始化
       const syPicgo = picgoExtension.initPicgo(picgo_cfg_070)
@@ -155,7 +155,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.SyCmd) {
-        this.logger.warn("SyCmd已挂载，忽略", entryName)
+        this.logger.debug("SyCmd已挂载，忽略", entryName)
         return
       }
 

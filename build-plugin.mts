@@ -21,6 +21,7 @@ import { build, InlineConfig } from "vite"
 import path from "path"
 import fs from "fs-extra"
 import pluginJson from "./plugin.json" assert { type: "json" }
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js"
 
 /**
  * zhi 主题构建
@@ -32,6 +33,20 @@ class ZhiBuild {
   // libraries
   private readonly libraries = pluginJson
 
+  /**
+   * 拷贝文件到构建输出目录
+   */
+  private copyPluginFile(entryPath: string, entryFolder: string, pluginBasePath: string, filename: string) {
+    const fromAbsPath = path.join(entryPath, filename)
+    const toAbsPath = path.join(pluginBasePath, entryFolder, filename)
+    // console.log(fromAbsPath)
+    // console.log(toAbsPath)
+    if (fs.pathExistsSync(fromAbsPath)) {
+      fs.copySync(fromAbsPath, toAbsPath)
+      console.log("[" + entryFolder + "] -> " + filename + " copied.")
+    }
+  }
+
   // 插件处理
   private handlePluginName(chunkInfo: any) {
     const facadeModuleId = chunkInfo.facadeModuleId
@@ -40,21 +55,11 @@ class ZhiBuild {
     const pluginBasePath = path.join("lib", "zhi-plugins")
 
     // 复制 manifest.json
-    const manifestPath = path.join(entryPath, "manifest.json")
-    const manifestToPath = path.join(pluginBasePath, entryFolder, "manifest.json")
-    if (fs.pathExistsSync(manifestPath)) {
-      fs.copySync(manifestPath, manifestToPath)
-      console.log("manifest.json copied.")
-    }
-
+    this.copyPluginFile(entryPath, entryFolder, pluginBasePath, "manifest.json")
     // 复制 README.md
-    const readmePath = path.join(entryPath, "README.md")
-    const readmeToPath = path.join(pluginBasePath, entryFolder, "README.md")
-    if (fs.pathExistsSync(manifestPath)) {
-      fs.copySync(readmePath, readmeToPath)
-      console.log("README.md copied.")
-    }
+    this.copyPluginFile(entryPath, entryFolder, pluginBasePath, "README.md")
 
+    // 返回主文件绝对路径
     const mainToPath = path.join(pluginBasePath, entryFolder)
     return path.join(mainToPath, "main.js")
   }
@@ -72,7 +77,7 @@ class ZhiBuild {
             },
           ],
         },
-        plugins: [],
+        plugins: [cssInjectedByJsPlugin({ styleId: "zhi-custom-style" })],
         build: {
           outDir: ".",
           lib: {
@@ -88,6 +93,7 @@ class ZhiBuild {
             include: [],
           },
           rollupOptions: {
+            plugins: [],
             output: {
               assetFileNames: "[name].[ext]",
               entryFileNames: (chunkInfo) => {
@@ -95,7 +101,7 @@ class ZhiBuild {
                 const facadeModuleId = chunkInfo.facadeModuleId
                 const entryPath = path.dirname(facadeModuleId ?? ".")
                 const entryFolder = entryPath.split("/").pop() ?? ""
-                console.log("entryFolder=>", entryFolder)
+                console.log(entryFolder + "is building...")
 
                 // 插件
                 if (entryFolder.includes("zhi-")) {
@@ -107,6 +113,7 @@ class ZhiBuild {
                 return chunkName
               },
               esModule: "if-default-prop",
+              manualChunks: undefined,
             },
             external: ["path", "fs", "siyuan"],
           },

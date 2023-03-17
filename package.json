@@ -74,6 +74,7 @@
   },
   "dependencies": {
     "siyuan": "^0.3.12",
+    "vite-plugin-css-injected-by-js": "^3.1.0",
     "zhi-sdk": "^1.0.12"
   },
   "repository": "terwer/zhi-mini",
