@@ -14,8 +14,7 @@ if __name__ == "__main__":
     scriptutils.rm_files("./theme.d.ts.map")
 
     # clean src build
-    scriptutils.rm_files("./src/**/*.map")
-    scriptutils.rm_files("./src/**/*.map")
+    scriptutils.rm_files("./src/**/*.d.ts")
     scriptutils.rm_files("./src/**/*.map")
 
 
