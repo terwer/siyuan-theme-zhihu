@@ -26,7 +26,7 @@ specifiers:
   vite-plugin-css-injected-by-js: ^3.1.0
   vite-plugin-dts: ^2.1.0
   vite-plugin-eslint: ^1.8.1
-  vitepress: 1.0.0-alpha.56
+  vitepress: 1.0.0-alpha.60
   vitepress-plugin-autobar: ^1.0.8
   vitest: ^0.29.2
   vue-eslint-parser: ^9.1.0
@@ -61,7 +61,7 @@ devDependencies:
   vite: 4.1.4_rrqazumqrxmcgxhfest3v5keaq
   vite-plugin-dts: 2.1.0_palfitq7jg67mg4usbzuzyleke
   vite-plugin-eslint: 1.8.1_eslint@8.35.0+vite@4.1.4
-  vitepress: 1.0.0-alpha.56_rrqazumqrxmcgxhfest3v5keaq
+  vitepress: 1.0.0-alpha.60_rrqazumqrxmcgxhfest3v5keaq
   vitepress-plugin-autobar: 1.0.8
   vitest: 0.29.2_stylus@0.59.0
   vue-eslint-parser: 9.1.0_eslint@8.35.0
@@ -6968,8 +6968,8 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /vitepress/1.0.0-alpha.56_rrqazumqrxmcgxhfest3v5keaq:
-    resolution: {integrity: sha512-FNoanHwmgWn4xZZcc8D34VKWcEs0F7e39xiVUahI7VzzI4VeiB+R/euYtPIUcTxIC2pRDhclw7/DO0JFYSGIpw==}
+  /vitepress/1.0.0-alpha.60_rrqazumqrxmcgxhfest3v5keaq:
+    resolution: {integrity: sha512-GI5iLDkZRqGEPixbSloT+p6pbKcMh9ykRRxt8vf9AjV1gaPit6Stg/t9WNxTdIhKVCuQMexGs1605DNApSRK2A==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
