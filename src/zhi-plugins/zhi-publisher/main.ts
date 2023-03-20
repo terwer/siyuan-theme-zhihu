@@ -17,7 +17,7 @@
 
 import ZhiUtil from "~/src/utils/ZhiUtil"
 import siyuan from "siyuan"
-import PublisherHook from "~/src/zhi-plugins/zhi-publisher-plugin/publisher-hook"
+import PublisherHook from "~/src/zhi-plugins/zhi-publisher/publisher-hook"
 
 /**
  * zhi publisher plugin
@@ -37,8 +37,8 @@ class ZhiPublisherPlugin extends siyuan.Plugin {
     this.publisherHook = new PublisherHook()
   }
 
-  onload() {
-    this.publisherHook.init()
+  async onload() {
+    await this.publisherHook.init()
     this.logger.info("ZhiPublisherPlugin loaded")
   }
 

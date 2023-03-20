@@ -21,6 +21,7 @@ import ZhiUtil from "~/src/utils/ZhiUtil"
  * 发布工具hook
  */
 class PublisherHook {
+  private readonly REPO_HASH = "1c968d1044aa4d0cfe9be1ad122c2ab5bc1e8e5e"
   private readonly logger
   private common
   private siyuanUtil
@@ -43,7 +44,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.JsonLocalStorage) {
-        this.logger.warn("JsonLocalStorage loaded, ignore.", entryName)
+        this.logger.debug("JsonLocalStorage loaded, ignore.", entryName)
         return
       }
 
@@ -75,7 +76,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.customstyle) {
-        this.logger.warn("customstyle loaded, ignore.", entryName)
+        this.logger.debug("customstyle loaded, ignore.", entryName)
         return
       }
 
@@ -94,7 +95,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.syp) {
-        console.warn("syp已挂载，忽略", entryName)
+        this.logger.debug("syp已挂载，忽略", entryName)
         return
       }
 
@@ -117,7 +118,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.SyPicgo) {
-        console.warn("SyPicgo loaded, ignore.", entryName)
+        this.logger.debug("SyPicgo loaded, ignore.", entryName)
         return
       }
 
@@ -136,7 +137,7 @@ class PublisherHook {
       const picgo_cfg_070 = picgoExtension.joinPath(picgo_cfg_folder_070, picgo_cfg_070_file)
 
       picgoExtension.upgradeCfg(picgo_cfg_067, picgo_cfg_folder_070, picgo_cfg_070_file)
-      this.logger.warn("PicGO配置文件初始化为=>", picgo_cfg_070)
+      this.logger.debug("PicGO配置文件初始化为=>", picgo_cfg_070)
 
       // 初始化
       const syPicgo = picgoExtension.initPicgo(picgo_cfg_070)
@@ -154,7 +155,7 @@ class PublisherHook {
 
       // 防止重复挂载
       if (syWin.SyCmd) {
-        this.logger.warn("SyCmd已挂载，忽略", entryName)
+        this.logger.debug("SyCmd已挂载，忽略", entryName)
         return
       }
 
@@ -184,11 +185,43 @@ class PublisherHook {
     // 初始化SyCmd配置
     this.initMethods.initCmder("PublisherHook")
   }
+  private async doDownload() {
+    this.logger.warn("Downloading sy-post-publisher from bazaar...")
+    const url = "/api/bazaar/installBazaarWidget"
+    const data = {
+      repoURL: "https://github.com/terwer/sy-post-publisher",
+      packageName: "sy-post-publisher",
+      repoHash: this.REPO_HASH,
+      mode: 0,
+    }
+    const fetchOps = {
+      body: JSON.stringify(data),
+      method: "POST",
+    }
+    const res = await fetch(url, fetchOps)
+    const resJson = await res.json()
+    if (resJson.code == 0) {
+      this.logger.info("Download sy-post-publisher from bazaar success")
+    } else {
+      throw new Error("Download sy-post-publisher error, this plugin will not work!")
+    }
+  }
 
-  init() {
+  public async init() {
     this.logger.info("Initiating sy-post-publisher ...")
     // 统一的初始化入口
     try {
+      const dataDir = this.common.electronUtil.siyuanDataPath()
+      const sypFolder = `${dataDir}/widgets/sy-post-publisher`
+      const fs = this.common.electronUtil.requireLib("fs")
+      this.logger.info("Widget sy-post-publisher folder=>", sypFolder)
+      if (!fs.existsSync(sypFolder)) {
+        this.logger.warn("Widget sy-post-publisher not exist, downloading...")
+        // 下载插件并解压
+        await this.doDownload()
+        this.logger.warn("Widget sy-post-publisher downloaded")
+      }
+
       this.doInit()
     } catch (e) {
       this.logger.warn("Failed to init sy-post-publisher，it may not work in some case.Error=>", e)
