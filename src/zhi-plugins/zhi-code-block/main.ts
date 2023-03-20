@@ -24,17 +24,16 @@
  */
 
 import siyuan from "siyuan"
-import ZhiUtil from "~/src/utils/ZhiUtil"
 
 import "./main.styl"
 
 class ZhiCodeBlockPlugin extends siyuan.Plugin {
-  private readonly logger
+  // private readonly logger
 
   constructor() {
     super()
-    const zhiSdk = ZhiUtil.zhiSdk()
-    this.logger = zhiSdk.getLogger()
+    // const zhiSdk = ZhiUtil.zhiSdk()
+    // this.logger = zhiSdk.getLogger()
   }
 
   onload() {
@@ -56,11 +55,13 @@ class ZhiCodeBlockPlugin extends siyuan.Plugin {
     //     })
     //   }
     // }, 3000)
-    this.logger.info("ZhiCodeBlockPlugin loaded")
+    // this.logger.info("ZhiCodeBlockPlugin loaded")
+    console.log("ZhiCodeBlockPlugin loaded")
   }
 
   onunload() {
-    this.logger.info("ZhiCodeBlockPlugin unloaded")
+    // this.logger.info("ZhiCodeBlockPlugin unloaded")
+    console.log("ZhiCodeBlockPlugin unloaded")
   }
 }
 
