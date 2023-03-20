@@ -112,8 +112,13 @@ class HackPluginSystem {
   /**
    * 获取插件系统对象
    */
-  public getPluginSystem = () => {
-    return this.siyuanApi.siyuanUtil.siyuanWindow().pluginSystem
+  public getPluginSystem = async () => {
+    const result = this.siyuanApi.siyuanUtil.siyuanWindow().pluginSystem
+    if (typeof result === "object" && typeof result.then === "function") {
+      return result
+    } else {
+      return Promise.resolve(result)
+    }
   }
 
   /**
@@ -124,14 +129,16 @@ class HackPluginSystem {
   }
 
   public async initPluginSystem() {
-    // 初始化过了，直接返回，防止插件系统重复加载
-    const pluginSystem = this.getPluginSystem()
+    // 情形一：初始化过了，直接返回，防止插件系统重复加载
+    const pluginSystem = await this.getPluginSystem()
     if (pluginSystem) {
-      this.logger.warn("Plugin system already loaded by snapshots, ignore initiation.")
-      this.logger.warn("Loaded plugin system version is ", this.getPluginSystemVersion())
-      return
+      this.logger.info("Plugin system already loaded by others, most likely snapshots, ignore initiation.")
+      this.logger.debug(pluginSystem)
+      this.logger.info("Loaded plugin system version is ", this.getPluginSystemVersion())
+      return Promise.resolve(pluginSystem)
     }
 
+    // 情形二：未初始化，重新初始化插件系统
     try {
       this.logger.info("Undetected plugin system，initiating plugin system...")
 
@@ -153,10 +160,9 @@ class HackPluginSystem {
       eval(sc)
     }
 
-    const sys = this.getPluginSystem()
     const sysv = this.getPluginSystemVersion() ?? "unknown"
     this.logger.info(this.common.strUtil.f("Plugin system inited, version => {0}.", sysv))
-    return Promise.resolve(sys)
+    return this.getPluginSystem()
   }
 }
 

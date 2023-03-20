@@ -1,0 +1,44 @@
+// -------------------------------------------------代码块-Dark+适配---------------------------------------------------
+html[data-theme-mode="light"][data-light-theme="Dark+"]
+  .code-block
+    overflow auto
+
+  .protyle-wysiwyg [data-node-id].code-block > .protyle-action
+    position absolute
+    // background var(--zhi-code-tab-bg)
+    background-color: var(--custom-popover-function-menu-background-color);
+    backdrop-filter: var(--custom-backdrop-popover-filter);
+    height 32px
+
+  .b3-typography .code-block .protyle-action .protyle-action__language
+  .protyle-wysiwyg .code-block .protyle-action .protyle-action__language
+    right 2.5rem
+    top 0.2rem
+
+  .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy
+  .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu
+    margin-top 0.3rem
+
+  .protyle-wysiwyg [data-node-id].code-block > .protyle-linenumber__rows
+    padding-top 0 !important
+
+html[data-theme-mode="dark"][data-dark-theme="Dark+"]
+  .code-block
+    border-radius 0 !important
+
+  .protyle-wysiwyg [data-node-id].code-block > .protyle-action
+    position absolute
+    background var(--zhi-code-tab-bg)
+    height 32px
+
+  .b3-typography .code-block .protyle-action .protyle-action__language
+  .protyle-wysiwyg .code-block .protyle-action .protyle-action__language
+    right 2.5rem
+    top 0.2rem
+
+  .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy
+  .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu
+    margin-top 0.3rem
+
+  .protyle-wysiwyg [data-node-id].code-block > .protyle-linenumber__rows
+    padding-top 0 !important
