@@ -17,7 +17,7 @@ specifiers:
   prettier: ^2.8.4
   siyuan: ^0.3.12
   stylelint: ^15.2.0
-  stylelint-config-standard: ^30.0.1
+  stylelint-config-standard: ^31.0.0
   stylelint-stylus: ^0.18.0
   stylus: ^0.59.0
   ts-node: ^10.9.1
@@ -53,7 +53,7 @@ devDependencies:
   jsdoc2vitepress: 1.0.5_stylus@0.59.0
   prettier: 2.8.4
   stylelint: 15.2.0
-  stylelint-config-standard: 30.0.1_stylelint@15.2.0
+  stylelint-config-standard: 31.0.0_stylelint@15.2.0
   stylelint-stylus: 0.18.0_stylelint@15.2.0
   stylus: 0.59.0
   ts-node: 10.9.1_zix2iy4c4a7fivhrc3ey4gy2pu
@@ -6381,21 +6381,21 @@ packages:
       stylelint: 15.2.0
     dev: true
 
-  /stylelint-config-recommended/10.0.1_stylelint@15.2.0:
-    resolution: {integrity: sha512-TQ4xQ48tW4QSlODcti7pgSRqBZcUaBzuh0jPpfiMhwJKBPkqzTIAU+IrSWL/7BgXlOM90DjB7YaNgFpx8QWhuA==}
+  /stylelint-config-recommended/11.0.0_stylelint@15.2.0:
+    resolution: {integrity: sha512-SoGIHNI748OCZn6BxFYT83ytWoYETCINVHV3LKScVAWQQauWdvmdDqJC5YXWjpBbxg2E761Tg5aUGKLFOVhEkA==}
     peerDependencies:
-      stylelint: ^15.0.0
+      stylelint: ^15.3.0
     dependencies:
       stylelint: 15.2.0
     dev: true
 
-  /stylelint-config-standard/30.0.1_stylelint@15.2.0:
-    resolution: {integrity: sha512-NbeHOmpRQhjZh5XB1B/S4MLRWvz4xxAxeDBjzl0tY2xEcayNhLbaRGF0ZQzq+DQZLCcPpOHeS2Ru1ydbkhkmLg==}
+  /stylelint-config-standard/31.0.0_stylelint@15.2.0:
+    resolution: {integrity: sha512-CUGAmtROCvX0YgMY2+6P9tqSkHj5z/75XxrQ8bGxvkCa1xYdGDx4poM0pa7cXc3s74/PZLJH/okxZZouRfOSGw==}
     peerDependencies:
-      stylelint: ^15.0.0
+      stylelint: ^15.3.0
     dependencies:
       stylelint: 15.2.0
-      stylelint-config-recommended: 10.0.1_stylelint@15.2.0
+      stylelint-config-recommended: 11.0.0_stylelint@15.2.0
     dev: true
 
   /stylelint-stylus/0.18.0_stylelint@15.2.0:
