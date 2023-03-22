@@ -15,7 +15,6 @@
  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import ZhiUtil from "~/src/utils/ZhiUtil"
 import siyuan from "siyuan"
 import PublisherHook from "~/src/zhi-plugins/zhi-publisher/publisher-hook"
 
@@ -25,26 +24,26 @@ import PublisherHook from "~/src/zhi-plugins/zhi-publisher/publisher-hook"
  * @author terwer
  * @since 1.0.0
  */
-class ZhiPublisherPlugin extends siyuan.Plugin {
+class ZhiPublisher extends siyuan.Plugin {
   private readonly logger
+  private readonly clientApi = siyuan.clientApi
   private readonly publisherHook
 
   constructor() {
     super()
-    const zhiSdk = ZhiUtil.zhiSdk()
-    this.logger = zhiSdk.getLogger()
+    this.logger = this.clientApi.createLogger(ZhiPublisher.name)
 
     this.publisherHook = new PublisherHook()
   }
 
   async onload() {
     await this.publisherHook.init()
-    this.logger.info("ZhiPublisherPlugin loaded")
+    this.logger.info("ZhiPublisher loaded")
   }
 
   onunload() {
-    this.logger.info("ZhiPublisherPlugin unloaded")
+    this.logger.info("ZhiPublisher unloaded")
   }
 }
 
-export default ZhiPublisherPlugin
+export default ZhiPublisher

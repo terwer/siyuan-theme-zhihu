@@ -27,42 +27,22 @@ import siyuan from "siyuan"
 
 import "./main.styl"
 
-class ZhiCodeBlockPlugin extends siyuan.Plugin {
-  // private readonly logger
+class ZhiCodeBlock extends siyuan.Plugin {
+  private readonly logger
+  private readonly clientApi = siyuan.clientApi
 
   constructor() {
     super()
-    // const zhiSdk = ZhiUtil.zhiSdk()
-    // this.logger = zhiSdk.getLogger()
+    this.logger = this.clientApi.createLogger(ZhiCodeBlock.name)
   }
 
   onload() {
-    // 使用 css 适配了，下面的不再需要
-    // setTimeout(() => {
-    //   // 获取自定义属性值
-    //   const themeLight = document.querySelector("html")?.getAttribute("data-light-theme")
-    //   this.logger.info("Found theme=>", themeLight)
-    //
-    //   // 适配 Rem Craft
-    //   if (themeLight === "Rem Craft") {
-    //     // 获取具有 .my-class 类的所有元素
-    //     const elements = document.querySelectorAll(
-    //       ".b3-typography .code-block .protyle-action .protyle-action__language,.protyle-wysiwyg .code-block .protyle-action .protyle-action__language"
-    //     )
-    //     // 迭代每个元素并设置样式
-    //     elements.forEach((element: any) => {
-    //       element.style.right = "5rem"
-    //     })
-    //   }
-    // }, 3000)
-    // this.logger.info("ZhiCodeBlockPlugin loaded")
-    console.log("ZhiCodeBlockPlugin loaded")
+    this.logger.info("ZhiCodeBlock loaded")
   }
 
   onunload() {
-    // this.logger.info("ZhiCodeBlockPlugin unloaded")
-    console.log("ZhiCodeBlockPlugin unloaded")
+    this.logger.info("ZhiCodeBlock unloaded")
   }
 }
 
-export default ZhiCodeBlockPlugin
+export default ZhiCodeBlock

@@ -16,7 +16,6 @@
  */
 
 import siyuan from "siyuan"
-import ZhiUtil from "~/src/utils/ZhiUtil"
 import Translucify from "~/src/zhi-plugins/zhi-picture/translucify"
 
 /**
@@ -26,14 +25,14 @@ import Translucify from "~/src/zhi-plugins/zhi-picture/translucify"
  * @author terwer
  * @since 1.0.0
  */
-class ZhiPicturePlugin extends siyuan.Plugin {
+class ZhiPicture extends siyuan.Plugin {
   private readonly logger
+  private readonly clientApi = siyuan.clientApi
   private readonly translucify
 
   constructor() {
     super()
-    const zhiSdk = ZhiUtil.zhiSdk()
-    this.logger = zhiSdk.getLogger()
+    this.logger = this.clientApi.createLogger(ZhiPicture.name)
 
     this.translucify = new Translucify().init()
   }
@@ -60,4 +59,4 @@ class ZhiPicturePlugin extends siyuan.Plugin {
   }
 }
 
-export default ZhiPicturePlugin
+export default ZhiPicture

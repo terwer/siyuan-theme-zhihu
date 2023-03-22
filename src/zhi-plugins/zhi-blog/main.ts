@@ -21,14 +21,14 @@ import ZhiUtil from "~/src/utils/ZhiUtil"
 
 const Plugin = siyuan.Plugin
 
-class ZhiBlogBlogPlugin extends Plugin {
+class ZhiBlog extends Plugin {
   private logger
+  private readonly clientApi = siyuan.clientApi
   private el!: HTMLElement
 
   constructor() {
     super()
-    const zhiSdk = ZhiUtil.zhiSdk()
-    this.logger = zhiSdk.getLogger()
+    this.logger = this.clientApi.createLogger(ZhiBlog.name)
   }
 
   onload() {
@@ -47,4 +47,4 @@ class ZhiBlogBlogPlugin extends Plugin {
   }
 }
 
-export default ZhiBlogBlogPlugin
+export default ZhiBlog

@@ -15,7 +15,7 @@ specifiers:
   jsdoc-babel: ^0.5.0
   jsdoc2vitepress: ^1.0.5
   prettier: ^2.8.4
-  siyuan: ^0.3.12
+  siyuan: ^0.3.18
   stylelint: ^15.2.0
   stylelint-config-standard: ^31.0.0
   stylelint-stylus: ^0.18.0
@@ -33,7 +33,7 @@ specifiers:
   zhi-sdk: ^1.0.12
 
 dependencies:
-  siyuan: 0.3.12
+  siyuan: 0.3.18
   vite-plugin-css-injected-by-js: 3.1.0_vite@4.1.4
   zhi-sdk: 1.0.12
 
@@ -6427,8 +6427,8 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
-  /siyuan/0.3.12:
-    resolution: {integrity: sha512-Hcjn7Ujisayi9SW5o0DBtV2Jj/B8PKEXlIksJfbyeTYAtTBpgy++Fhy3nO0Pz1rJazadLt/dxKZ1X8JvlDgFHw==}
+  /siyuan/0.3.18:
+    resolution: {integrity: sha512-f4Q0AlT3RLkQB7JnZlcypeJ2frfymGSTwVWngtIp8+iMxTxnOnPPfuagcslNVmimlaTQd2Th/S3bDwDjpOPXsg==}
     dev: false
 
   /slash/3.0.0:

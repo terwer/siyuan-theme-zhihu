@@ -33,12 +33,17 @@ import { IPluginCommand } from "siyuan/types"
  * @since 1.0.0
  */
 class SuperTable extends siyuan.Plugin {
+  private readonly logger
+  private readonly clientApi = siyuan.clientApi
+
   constructor() {
     super()
+
+    this.logger = this.clientApi.createLogger(SuperTable.name)
   }
 
   onload() {
-    console.log("SuperTable loaded")
+    this.logger.info("SuperTable loaded")
   }
 
   onunload() {

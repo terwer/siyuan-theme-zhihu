@@ -15,7 +15,9 @@
  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import ZhiUtil from "~/src/utils/ZhiUtil"
+import siyuan from "siyuan"
+import ZhiPublisher from "~/src/zhi-plugins/zhi-publisher/main"
+import { Common, SiyuanUtil } from "zhi-sdk"
 
 /**
  * 发布工具hook
@@ -23,14 +25,14 @@ import ZhiUtil from "~/src/utils/ZhiUtil"
 class PublisherHook {
   private readonly REPO_HASH = "1c968d1044aa4d0cfe9be1ad122c2ab5bc1e8e5e"
   private readonly logger
+  private readonly clientApi = siyuan.clientApi
   private common
   private siyuanUtil
 
   constructor() {
-    const zhiSdk = ZhiUtil.zhiSdk()
-    this.logger = zhiSdk.getLogger()
-    this.common = zhiSdk.common
-    this.siyuanUtil = zhiSdk.siyuanApi.siyuanUtil
+    this.logger = this.clientApi.createLogger(ZhiPublisher.name)
+    this.common = new Common()
+    this.siyuanUtil = new SiyuanUtil()
   }
 
   // 初始化方法统一定义
