@@ -1,15 +1,5 @@
 [
   {
-    "entry": "./src/zhi-plugins/zhi-picture/main.ts",
-    "name": "ZhiPicture",
-    "fileName": "zhi-picture"
-  },
-  {
-    "entry": "./src/zhi-plugins/zhi-blog/main.ts",
-    "name": "ZhiBlog",
-    "fileName": "zhi-blog"
-  },
-  {
     "entry": "./src/zhi-plugins/zhi-publisher/main.ts",
     "name": "ZhiPublisher",
     "fileName": "zhi-publisher"
@@ -18,5 +8,10 @@
     "entry": "./src/zhi-plugins/zhi-code-block/main.ts",
     "name": "ZhiCodeBlock",
     "fileName": "zhi-code-block"
+  },
+  {
+    "entry": "./src/zhi-plugins/super-table/main.ts",
+    "name": "SuperTable",
+    "fileName": "super-table"
   }
 ]

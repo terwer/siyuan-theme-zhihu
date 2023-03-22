@@ -31,6 +31,16 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js"
  */
 class ZhiBuild {
   // libraries
+  //  {
+  //    "entry": "./src/zhi-plugins/zhi-picture/main.ts",
+  //    "name": "ZhiPicture",
+  //    "fileName": "zhi-picture"
+  //  },
+  //  {
+  //    "entry": "./src/zhi-plugins/zhi-blog/main.ts",
+  //    "name": "ZhiBlog",
+  //    "fileName": "zhi-blog"
+  //  },
   private readonly libraries = pluginJson
 
   /**
@@ -61,7 +71,9 @@ class ZhiBuild {
 
     // 返回主文件绝对路径
     const mainToPath = path.join(pluginBasePath, entryFolder)
-    return path.join(mainToPath, "main.js")
+    const mainJsName = "main.js"
+    console.log("[" + entryFolder + "] -> process " + mainJsName)
+    return path.join(mainToPath, mainJsName)
   }
 
   public async processBuild() {
@@ -97,20 +109,7 @@ class ZhiBuild {
             output: {
               assetFileNames: "[name].[ext]",
               entryFileNames: (chunkInfo) => {
-                let chunkName
-                const facadeModuleId = chunkInfo.facadeModuleId
-                const entryPath = path.dirname(facadeModuleId ?? ".")
-                const entryFolder = entryPath.split("/").pop() ?? ""
-                console.log(entryFolder + "is building...")
-
-                // 插件
-                if (entryFolder.includes("zhi-")) {
-                  chunkName = that.handlePluginName(chunkInfo)
-                } else {
-                  // 其他，比如主题入口
-                  chunkName = "[name].js"
-                }
-                return chunkName
+                return that.handlePluginName(chunkInfo)
               },
               esModule: "if-default-prop",
               manualChunks: undefined,
