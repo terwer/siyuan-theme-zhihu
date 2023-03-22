@@ -35,9 +35,9 @@ class ZhiUtil {
     if (!ZhiUtil.zhiSdkObj) {
       const env = new Env(import.meta.env)
       ZhiUtil.zhiSdkObj = new ZhiSdk(env)
-      // const logger = ZhiUtil.zhiSdkObj.getLogger()
-      // const common = ZhiUtil.zhiSdkObj.common
-      // logger.debug(common.strUtil.f("ZhiSdk inited, components are available now,like logger, env and so on."))
+      const logger = ZhiUtil.zhiSdkObj.getLogger()
+      const common = ZhiUtil.zhiSdkObj.common
+      logger.debug(common.strUtil.f("ZhiSdk inited, components are available now,like logger, env and so on."))
     }
     return ZhiUtil.zhiSdkObj
   }
