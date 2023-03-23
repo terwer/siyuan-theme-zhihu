@@ -32,11 +32,6 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js"
 class ZhiBuild {
   // libraries
   //  {
-  //    "entry": "./src/zhi-plugins/zhi-picture/main.ts",
-  //    "name": "ZhiPicture",
-  //    "fileName": "zhi-picture"
-  //  },
-  //  {
   //    "entry": "./src/zhi-plugins/zhi-blog/main.ts",
   //    "name": "ZhiBlog",
   //    "fileName": "zhi-blog"
