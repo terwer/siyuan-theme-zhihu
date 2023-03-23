@@ -18,7 +18,7 @@
   "typings": "./typings/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf ./lib && pnpm build:theme && pnpm build:plugin",
+    "build": "pnpm build:css && rm -rf ./lib && pnpm build:theme && pnpm build:plugin",
     "build:theme": "vite build && cp ./lib/theme.js ./theme.js",
     "build:plugin": "node --experimental-specifier-resolution=node --loader ts-node/esm build-plugin.mts",
     "watch:css": "stylus --watch theme.styl --out ./theme.css",
