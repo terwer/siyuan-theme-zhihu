@@ -20,30 +20,27 @@ import { IPluginCommand } from "siyuan/types"
 
 const Plugin = siyuan.Plugin
 
-class ZhiBlog extends Plugin {
+class WidgetBridge extends Plugin {
   private logger
   private readonly clientApi = siyuan.clientApi
   private el!: HTMLElement
 
   constructor() {
     super()
-    this.logger = this.clientApi.createLogger(ZhiBlog.name)
+    this.logger = this.clientApi.createLogger(WidgetBridge.name)
   }
 
   onload() {
-    this.el = document.createElement("button")
-    this.el.innerText = "ZhiBlog"
-    siyuan.clientApi.addToolbarRight(this.el)
-    this.logger.info("ZhiBlog load")
+    this.logger.info("WidgetBridge load")
   }
 
   onunload() {
-    this.logger.info("ZhiBlog unload")
+    this.logger.info("WidgetBridge unload")
   }
 
   registerCommand(command: IPluginCommand) {
-    this.logger.info("ZhiBlog registerCommand", command)
+    this.logger.info("WidgetBridge registerCommand", command)
   }
 }
 
-export default ZhiBlog
+export default WidgetBridge
