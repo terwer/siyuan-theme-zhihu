@@ -1,5 +1,6 @@
 import ZhiUtil from "~/src/utils/ZhiUtil"
 import HackPluginSystem from "~/src/plugin-system/hack-plugin-system"
+import minimist from "minimist"
 
 /**
  * 插件系统入口
@@ -81,6 +82,7 @@ class PluginSystemHook {
     this.logger.debug("Plugins folder=>", pluginsPath)
 
     let syncedCount = 0
+    let forceSyncedCount = 0
     let zhiPlugins: any = []
 
     // 未找到主题差距，不同步
@@ -151,6 +153,7 @@ class PluginSystemHook {
           this.common.electronUtil.rmFolder(to)
           this.common.electronUtil.copyFolderSync(from, to)
           syncedCount++
+          forceSyncedCount++
         } else {
           this.logger.debug(
             this.common.strUtil.f("Already synced and the latest version [{0}] {1}", pluginBasename, manifest.version)
@@ -168,9 +171,18 @@ class PluginSystemHook {
     )
 
     if (syncedCount > 0) {
-      this.logger.warn(
-        this.common.strUtil.f("Synced {0} zhi plugins, you need to reload siyuan to take effect.", syncedCount)
-      )
+      // 重载页面以使插件生效
+      if (forceSyncedCount == 0) {
+        this.logger.warn(
+          this.common.strUtil.f("Synced {0} zhi plugins, will reload siyuan to take effect...", syncedCount)
+        )
+        this.common.browserUtil.reloadPage()
+      } else {
+        // 强制更新需要手动重载，防止循环刷新
+        this.logger.warn(
+          this.common.strUtil.f("Synced {0} zhi plugins, will reload siyuan to take effect...", syncedCount)
+        )
+      }
     }
   }
 

@@ -26,6 +26,7 @@
 import siyuan from "siyuan"
 import { IPluginCommand } from "siyuan/types"
 import "./main.styl"
+import MarkdownRenderer from "~/src/zhi-plugins/siyuan2md/MarkdownRenderer"
 
 /**
  * Markdown批量转换
@@ -36,14 +37,37 @@ import "./main.styl"
 class Siyuan2md extends siyuan.Plugin {
   private readonly logger
   private readonly clientApi = siyuan.clientApi
+  private readonly markdownRender
 
   constructor() {
     super()
 
     this.logger = this.clientApi.createLogger(Siyuan2md.name)
+    this.markdownRender = new MarkdownRenderer()
   }
 
   onload() {
+    const syncButton = document.createElement("button")
+    syncButton.classList.add("toolbar__item")
+
+    // 使用思源图标
+    // 图标地址：http://127.0.0.1:6806/appearance/icons/ant/icon.js?v=2.7.7
+    syncButton.insertAdjacentHTML("beforeend", '<svg><use xlink:href="#iconCut"></use></svg>')
+    syncButton.addEventListener("click", async (event) => {
+      this.logger.info("Start syncing markdown files ...")
+      const startTime = Date.now()
+
+      await this.markdownRender.renderMd()
+
+      this.logger.info("Markdown files synced.")
+      const endTime = Date.now()
+      const cost = ((endTime - startTime) / 1000.0).toFixed(2)
+      this.logger.info(`Markdown files render success cost: ${cost} seconds`)
+
+      event.stopPropagation()
+    })
+
+    this.clientApi.addToolbarRight(syncButton)
     this.logger.info("Siyuan2md loaded")
   }
 
