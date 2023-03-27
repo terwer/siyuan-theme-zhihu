@@ -39,6 +39,16 @@ class ZhiBuild {
   private readonly libraries = pluginJson
 
   /**
+   * 等待一段时间
+   * @param ms 毫秒
+   *
+   * @private
+   */
+  private sleep(ms: number): Promise<any> {
+    return new Promise((resolve) => setTimeout(resolve, ms))
+  }
+
+  /**
    * 拷贝文件到构建输出目录
    */
   private copyPluginFile(entryPath: string, entryFolder: string, pluginBasePath: string, filename: string) {
@@ -74,6 +84,10 @@ class ZhiBuild {
   public async processBuild() {
     const that = this
     for (const libItem of this.libraries) {
+      if (libItem.injectCss) {
+        console.log("found css, will inject css to js as ", libItem.cssId)
+      }
+
       const viteConfig: InlineConfig = {
         configFile: false,
         resolve: {
@@ -84,7 +98,7 @@ class ZhiBuild {
             },
           ],
         },
-        plugins: [cssInjectedByJsPlugin({ styleId: "zhi-custom-style" })],
+        plugins: [libItem.injectCss ? cssInjectedByJsPlugin({ styleId: libItem.cssId }) : null],
         build: {
           outDir: ".",
           lib: {
@@ -121,6 +135,10 @@ class ZhiBuild {
         },
       }
       await build(viteConfig)
+
+      console.log("开始等待。。。")
+      await this.sleep(2000)
+      console.log("2 秒后继续下一个构建")
     }
   }
 }

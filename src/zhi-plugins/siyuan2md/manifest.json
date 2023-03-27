@@ -1,0 +1,9 @@
+{
+  "key": "siyuan2md",
+  "name": "Markdown批量转换",
+  "description": "将思源笔记的文档批量转换为Markdown文件，支持转换属性为Hexo、HUGO、Vitepress、Obsidian等平对应的FrontFormatter",
+  "author": "terwer",
+  "url": "https://github.com/terwer/zhi-mini/tree/main/src/zhi-plugins/siyuan2md",
+  "version": "1.0.0",
+  "forceUpdate": true
+}

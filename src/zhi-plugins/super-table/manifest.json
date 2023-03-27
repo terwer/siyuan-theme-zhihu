@@ -5,5 +5,5 @@
   "author": "terwer",
   "url": "https://github.com/terwer/zhi-mini/tree/main/src/zhi-plugins/super-table",
   "version": "1.0.0",
-  "forceUpdate": true
+  "forceUpdate": false
 }

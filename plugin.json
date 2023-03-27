@@ -2,21 +2,33 @@
   {
     "entry": "./src/zhi-plugins/zhi-publisher/main.ts",
     "name": "ZhiPublisher",
-    "fileName": "zhi-publisher"
+    "fileName": "zhi-publisher",
+    "injectCss": false
   },
   {
     "entry": "./src/zhi-plugins/zhi-code-block/main.ts",
     "name": "ZhiCodeBlock",
-    "fileName": "zhi-code-block"
+    "fileName": "zhi-code-block",
+    "injectCss": true,
+    "cssId": "zhi-custom-style-code-block"
   },
-    {
-      "entry": "./src/zhi-plugins/zhi-picture/main.ts",
-      "name": "ZhiPicture",
-      "fileName": "zhi-picture"
-    },
+  {
+    "entry": "./src/zhi-plugins/zhi-picture/main.ts",
+    "name": "ZhiPicture",
+    "fileName": "zhi-picture",
+    "injectCss": false
+  },
   {
     "entry": "./src/zhi-plugins/super-table/main.ts",
     "name": "SuperTable",
-    "fileName": "super-table"
+    "fileName": "super-table",
+    "injectCss": false
+  },
+  {
+    "entry": "./src/zhi-plugins/siyuan2md/main.ts",
+    "name": "SiyuanMd",
+    "fileName": "siyuan2md",
+    "injectCss": true,
+    "cssId": "zhi-custom-style-siyuan2md"
   }
 ]
