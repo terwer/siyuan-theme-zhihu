@@ -137,7 +137,7 @@ class ZhiBuild {
       await build(viteConfig)
 
       console.log("开始等待。。。")
-      await this.sleep(2000)
+      await this.sleep(10000)
       console.log("2 秒后继续下一个构建")
     }
   }

@@ -55,6 +55,9 @@ class MarkdownRenderer {
     // this.outputFolder = this.common.electronUtil.joinPath(appDataFolder, "siyuan2md", "default")
   }
 
+  /**
+   * 渲染 Markdown 的入口
+   */
   public async renderMd() {
     const fs = this.common.electronUtil.requireLib("fs")
     if (!fs.existsSync(this.outputFolder)) {
