@@ -69,7 +69,7 @@
     "vite-plugin-eslint": "^1.8.1",
     "vitepress": "1.0.0-alpha.61",
     "vitepress-plugin-autobar": "^1.0.8",
-    "vitest": "^0.29.2",
+    "vitest": "^0.30.0",
     "vue-eslint-parser": "^9.1.0"
   },
   "dependencies": {
