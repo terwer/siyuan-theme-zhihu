@@ -73,7 +73,7 @@
     "vue-eslint-parser": "^9.1.0"
   },
   "dependencies": {
-    "siyuan": "^0.3.12",
+    "siyuan": "^0.7.0",
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "zhi-sdk": "^1.0.12"
   },
