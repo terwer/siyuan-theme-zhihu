@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "stylus --watch theme.styl --out ./theme.css",
     "build": "stylus --compress theme.styl --out ./theme.css",
-    "syncVersion": "ts-node-esm --experimental-specifier-resolution=node tools/syncVersion.ts"
+    "syncVersion": "ts-node-esm --experimental-specifier-resolution=node tools/syncVersion.ts",
+    "parseChangelog": "ts-node-esm --experimental-specifier-resolution=node tools/changelogParser.ts"
   },
   "config": {
     "commitizen": {
@@ -24,6 +25,7 @@
     }
   },
   "devDependencies": {
+    "@terwer/changelog-parser": "^1.1.0",
     "@terwer/commit-config-custom": "latest",
     "@terwer/eslint-config-custom": "latest",
     "@types/node": "18",
