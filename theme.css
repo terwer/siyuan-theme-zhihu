@@ -1,3 +1,27 @@
+/*
+ * Copyright (c) 2023, Terwer . All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Terwer designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Terwer in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Terwer, Shenzhen, Guangdong, China, youweics@163.com
+ * or visit www.terwer.space if you need additional information or have any
+ * questions.
+ */
 @font-face {
   font-family: "LXGW WenKai";
   font-style: normal;
@@ -855,6 +879,12 @@ body .b3-label {
 .protyle-wysiwyg--attr {
   padding-top: 0 !important;
 }
+.b3-typography blockquote,
+.b3-typography .bq,
+.protyle-wysiwyg blockquote,
+.protyle-wysiwyg .bq {
+  background-color: transparent;
+}
 html[data-theme-mode="light"] {
   --zhi-code-tab-bg: #fff;
   --zhi-code-content-bg: #f8f9fa;
@@ -876,9 +906,89 @@ html[data-theme-mode="green"] {
 #preview .protyle-action__copy {
   display: none !important;
 }
+html[data-light-theme="Rem Craft"] .b3-typography .code-block,
+html[data-light-theme="Rem Craft"] .protyle-wysiwyg .code-block {
+  background: var(--zhi-code-tab-bg);
+}
 html[data-light-theme="Rem Craft"] .b3-typography .code-block .protyle-action .protyle-action__language,
 html[data-light-theme="Rem Craft"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
   right: 5rem;
+  top: -0.1rem;
+}
+html[data-light-theme="Rem Craft"] .protyle-linenumber__rows {
+  margin-top: 8px !important;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .code-block {
+  overflow: auto;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-action {
+  position: absolute;
+  background-color: var(--custom-popover-function-menu-background-color);
+  backdrop-filter: var(--custom-backdrop-popover-filter);
+  height: 32px;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  right: 2.5rem;
+  top: 0.2rem;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy,
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu {
+  margin-top: 0.3rem;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-linenumber__rows {
+  padding-top: 0 !important;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .code-block {
+  border-radius: 0 !important;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-action {
+  position: absolute;
+  background: var(--zhi-code-tab-bg);
+  height: 32px;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  right: 2.5rem;
+  top: 0.2rem;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy,
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu {
+  margin-top: 0.3rem;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-linenumber__rows {
+  padding-top: 0 !important;
+}
+html[data-light-theme="HBuilderX-Light"] {
+  overflow: auto;
+}
+html[data-light-theme="HBuilderX-Light"] .code-block {
+  overflow: auto;
+}
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg [data-node-id].code-block > .protyle-action {
+  height: 28px;
+}
+html[data-light-theme="HBuilderX-Light"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  top: 0.5rem;
+  right: 3rem;
+}
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy,
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu {
+  margin-top: 0.2rem;
+}
+html[data-light-theme="Savor"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="Savor"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  top: 0.2rem;
+}
+html[data-light-theme="Sofill-"] .code-block::after {
+  top: 0.7rem !important;
+}
+html[data-light-theme="Sofill-"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="Sofill-"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  top: -0.1rem;
+  left: unset !important;
+  right: 0.2rem;
 }
 .code-block {
   border: 0.5px solid var(--zhi-border-color) !important;
@@ -900,10 +1010,10 @@ html[data-light-theme="Rem Craft"] .protyle-wysiwyg .code-block .protyle-action 
   background: #fa625c;
   box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
   border-radius: var(--zhi-border-radius-round);
-  top: 10px;
-  left: 8px;
-  height: 12px;
-  width: 12px;
+  top: 9px !important;
+  left: 8px !important;
+  height: 12px !important;
+  width: 12px !important;
   z-index: 1;
 }
 .protyle-linenumber__rows {
@@ -948,6 +1058,9 @@ code.hljs {
 .protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
 .protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
   color: #808080;
+}
+.protyle-wysiwyg .p[data-node-id][custom-riff-decks] {
+  box-shadow: none !important;
 }
 @media screen and (min-width: 1px) and (max-width: 719px) {
   .protyle-background {

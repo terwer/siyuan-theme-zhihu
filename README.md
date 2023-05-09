@@ -1,42 +1,14 @@
-# zhi-mini
+[中文](https://github.com/terwer/zhihu-theme/blob/main/README_zh_CN.md)
 
-a mini yet powerful siyuan-note theme
+# zhihu-theme
 
-![version](https://img.shields.io/github/release/terwer/zhi-mini.svg?style=flat-square)
-![license](https://img.shields.io/badge/license-GPL-blue.svg?style=popout-square)
+A siyuan-note theme inspired by zhihu
 
-## Recommand IDE
+## Core Features
 
-vscode
+The theme is inspired by `Zhihu` but not limited to its style. The appearance optimization includes but is not limited
+to:
 
-## Useful scripts
-
-### Develop css
-
-```bash
-pnpm watch:css
-```
-
-### Develop js
-
-```bash
-pnpm dev
-```
-
-### Build
-
-```bash
-pnpm ci
-```
-
-### Publish to npm
-
-```bash
-pnpm package
-```
-
-### Docs
-
-```bash
-pnpm vitepress:dev
-```
+- Font style beautification, using `Open Sans` for English and `LXGW WenKai` for Chinese
+- Background color optimization, overall layout and spacing optimization
+- Code block beautification, similar to the Mac window style

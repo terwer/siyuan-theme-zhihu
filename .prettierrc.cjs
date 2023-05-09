@@ -23,4 +23,8 @@
  * questions.
  */
 
-@require "./style/theme/zhi"
+module.exports = {
+  semi: false,
+  singleQuote: false,
+  printWidth: 120,
+}

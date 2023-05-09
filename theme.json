@@ -1,7 +1,32 @@
 {
-  "name": "zhi-mini",
+  "name": "zhihu-theme",
   "author": "terwer",
-  "url": "https://github.com/terwer/zhi-mini",
-  "version": "1.0.0",
-  "modes": ["dark", "light", "green"]
+  "url": "https://github.com/terwer/zhihu-theme",
+  "displayName": {
+    "default": "Zhihu",
+    "zh_CN": "Zhihu"
+  },
+  "description": {
+    "default": "A siyuan-note theme inspired by zhihu",
+    "zh_CN": "一款知乎风格的思源笔记主题"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md"
+  },
+  "i18n": [
+    "en_US",
+    "zh_CN"
+  ],
+  "funding": {
+    "custom": [
+      "https://afdian.net/a/terwer"
+    ]
+  },
+  "modes": [
+    "light",
+    "dark",
+    "green"
+  ],
+  "version": "0.0.1"
 }
