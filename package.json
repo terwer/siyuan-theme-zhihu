@@ -17,7 +17,8 @@
     "dev": "stylus --watch theme.styl --out ./theme.css",
     "build": "stylus --compress theme.styl --out ./theme.css",
     "syncVersion": "ts-node-esm --experimental-specifier-resolution=node tools/syncVersion.ts",
-    "parseChangelog": "ts-node-esm --experimental-specifier-resolution=node tools/changelogParser.ts"
+    "parseChangelog": "ts-node-esm --experimental-specifier-resolution=node tools/changelogParser.ts",
+    "prepareRelease": "pnpm syncVersion && pnpm parseChangelog"
   },
   "config": {
     "commitizen": {
