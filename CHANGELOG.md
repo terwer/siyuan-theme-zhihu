@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/terwer/zhihu-theme/compare/v0.0.3...v0.0.4) (2023-05-09)
+
+
+### Miscellaneous
+
+* automated sync version ([b6d7588](https://github.com/terwer/zhihu-theme/commit/b6d7588e3647b17ff64b1ea377472d50bd4ac723))
+
 ## [0.0.3](https://github.com/terwer/zhihu-theme/compare/v0.0.2...v0.0.3) (2023-05-09)
 
 
