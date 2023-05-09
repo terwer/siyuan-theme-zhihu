@@ -1,32 +1,107 @@
-name: CI
-
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
 
+name: release-please
 jobs:
-  build:
-
+  release-please:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
     steps:
-      - uses: actions/checkout@v3
+      # Create release
+      - name: Create release
+        uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: release-please-action
+          ## branch to open pull release PR against (detected by default)
+          default-branch: main
+          ## Should breaking changes before 1.0.0 produce minor bumps? Default false
+          bump-minor-pre-major: true
+          ## Should feat changes before 1.0.0 produce patch bumps instead of minor bumps? Default false
+          bump-patch-for-minor-pre-major: true
+          ## If set, create releases that are pre-major or pre-release version marked as pre-release on GitHub. Defaults false
+          prerelease: true
+          ## header used within the release PR body, defaults to using :robot: I have created a release *beep* *boop*
+          pull-request-header: ':robot: A new release will be created'
+          ## A JSON formatted String containing to override the outputted changelog sections
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"refactor","section":"Code Refactoring","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"perf","section":"Performance Improvements","hidden":false}]'
 
-      - name : jq theme.json
+      # Checkout
+      - name: Checkout
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v3
+
+      # Install Node.js
+      - name: Install Node.js
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+
+      # Install pnpm
+      - name: Install pnpm
+        if: ${{ steps.release.outputs.release_created }}
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+
+      # Get pnpm store directory
+      - name: Get pnpm store directory
+        if: ${{ steps.release.outputs.release_created }}
+        id: pnpm-cache
+        shell: bash
         run: |
-          cat theme.json | jq .version
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - name: package
+      # Setup pnpm cache
+      - name: Setup pnpm cache
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+
+      # Install dependencies
+      - name: Install dependencies
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm install
+
+      # Prepare new version
+      # https://github.com/google-github-actions/release-please-action#outputs
+      - name: Prepare new version
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          pnpm syncVersion -v=${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
+          git config user.name terwer[bot]
+          git config user.email youweics@163.com
+          git remote add gh-token "https://${{ secrets.GH_TOKEN }}@github.com/terwer/sy-post-publisher.git"
+          git add -A
+          git push origin main
+
+      # Build for production
+      - name: Build for production
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm build
+
+      # Archive package
+      - name: Archive package
+        if: ${{ steps.release.outputs.release_created }}
         run: |
           find ./ -name 'theme.json' -o -name 'icon.png' -o -name 'preview.png' -o -name 'README.md' -o -name 'README_zh_CN.md' -o -name 'theme.css' | xargs zip package.zip
 
-      - uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          artifactErrorsFailBuild: true
-          artifacts: "package.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # Upload package to release
+      # https://github.com/philips-labs/terraform-aws-github-runner/blob/main/.github/workflows/release.yml#L46
+      - name: Upload package.zip to the release
+        if: ${{ steps.release.outputs.releases_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} package.zip
