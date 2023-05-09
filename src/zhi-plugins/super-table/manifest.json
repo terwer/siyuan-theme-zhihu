@@ -1,9 +1,0 @@
-{
-  "key": "super-table",
-  "name": "超级表格",
-  "description": "模仿飞书云文档多维表格，支持看板、表格、甘特图、表单等特性",
-  "author": "terwer",
-  "url": "https://github.com/terwer/zhi-mini/tree/main/src/zhi-plugins/super-table",
-  "version": "1.0.0",
-  "forceUpdate": false
-}

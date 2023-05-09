@@ -1,9 +1,0 @@
-{
-  "key": "zhi-picture",
-  "name": "图片背景透明",
-  "description": "将图片背景设置为透明背景，可用于暗黑主题的白底图片适配",
-  "author": "terwer",
-  "url": "https://github.com/terwer/zhi-mini/tree/main/src/zhi-plugins/zhi-picture",
-  "version": "1.0.0",
-  "forceUpdate": false
-}

@@ -1,9 +1,0 @@
-{
-  "key": "widget-bridge",
-  "name": "博客功能",
-  "description": "提供一切挂件的插件搭桥，用菜单和打开新窗口的方式使用挂件",
-  "author": "terwer",
-  "url": "https://github.com/terwer/zhi-mini/tree/main/src/zhi-plugins/widget-bridge",
-  "version": "1.0.0",
-  "forceUpdate": false
-}

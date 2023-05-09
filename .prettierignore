@@ -1,13 +1,11 @@
 # platform
-.nuxt
-.output
 
 # Ignore artifacts:
 dist
 node_modules
 
-# Ignore all HTML files:
-*.html
+# Ignore all dts files:
+*.d.ts
 
 # lib
 /pnpm-lock.yaml

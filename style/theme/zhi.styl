@@ -23,4 +23,26 @@
  * questions.
  */
 
-@require "./style/theme/zhi"
+// 基本变量
+// vars-zhi = vars-common + 自定义变量
+@import "../common/vars/vars-zhi"
+
+// web字体
+// fonts = lxgw + opensans
+@import "../common/fonts"
+
+// 基本样式
+// global = basic + 全局样式
+@import "../common/global"
+
+// 编辑器
+@import "./widgets/editor"
+
+// 代码块
+@import "./widgets/code-block"
+
+// 闪卡
+@import "./widgets/deck"
+
+// 移动端
+@import "./widgets/mobile"
