@@ -32,6 +32,8 @@ jobs:
       - name: Checkout
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       # Install Node.js
       - name: Install Node.js
@@ -82,9 +84,10 @@ jobs:
           pnpm syncVersion -v=${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
           git config user.name terwer[bot]
           git config user.email youweics@163.com
-          git remote add gh-token "https://${{ secrets.GH_TOKEN }}@github.com/terwer/sy-post-publisher.git"
+          git status
           git add -A
-          git push origin main
+          git commit -am "chore: automated sync version"
+          git push
 
       # Build for production
       - name: Build for production
@@ -94,8 +97,11 @@ jobs:
       # Archive package
       - name: Archive package
         if: ${{ steps.release.outputs.release_created }}
-        run: |
-          find ./ -name 'theme.json' -o -name 'icon.png' -o -name 'preview.png' -o -name 'README.md' -o -name 'README_zh_CN.md' -o -name 'theme.css' | xargs zip package.zip
+        uses: vimtor/action-zip@v1
+        with:
+          files: theme.json theme.css icon.png preview.png README.md README_zh_CN.md
+          recursive: false
+          dest: package.zip
 
       # Upload package to release
       # https://github.com/philips-labs/terraform-aws-github-runner/blob/main/.github/workflows/release.yml#L46
