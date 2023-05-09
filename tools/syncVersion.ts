@@ -9,11 +9,17 @@ class SyncVersion {
       const data = JSON.parse(rawData.toString())
 
       // Modify version field in JSON data
+      const pkgData = await fs.promises.readFile("package.json")
+      const pkg = JSON.parse(pkgData.toString())
       if (!newVersion) {
-        const pkgData = await fs.promises.readFile("package.json")
-        const pkg = JSON.parse(pkgData.toString())
         newVersion = pkg["version"]
       }
+
+      if (data[versionField] === newVersion) {
+        console.log("版本号已经是最新，无需修改")
+        return
+      }
+
       data[versionField] = newVersion
 
       // Write modified JSON back to file
