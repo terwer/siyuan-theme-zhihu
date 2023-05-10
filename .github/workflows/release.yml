@@ -93,7 +93,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         uses: vimtor/action-zip@v1
         with:
-          files: theme.json theme.css icon.png preview.png README.md README_zh_CN.md
+          files: theme.json theme.css style/common/fonts/webfont/webfont.css icon.png preview.png README.md README_zh_CN.md
           recursive: false
           dest: package.zip
 

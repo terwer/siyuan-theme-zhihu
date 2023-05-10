@@ -23,12 +23,21 @@
  * questions.
  */
 
-@import "basic-light"
-@import "basic-dark"
-@import "basic-green"
-
 // 基础样式
-:root
-  --zhi-font-family _font-family-mono
-  --zhi-font-family-code _font-family-mono
-  --zhi-border-radius-round _border-radius-round
+body
+  // 字体
+  --b3-font-family _font-family-mono
+  --b3-font-family-code _font-family-mono
+  --b3-font-family-graph _font-family-mono
+  --b3-font-family-emoji _font-family-mono
+  --b3-font-family-math _font-family-mono
+
+  // 字体大小、间距
+  font-size _font-size-normal
+  margin _padding-zero
+  padding _margin-zero
+  color var(--zhi-text-color)
+
+  // 标签间距
+  .b3-label
+    line-height 22px
