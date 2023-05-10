@@ -178,3 +178,42 @@ code.hljs {
     padding-right: 16px !important;
   }
 }
+html[data-theme-mode="light"] {
+  --b3-protyle-inline-blockref-color: #175199;
+  --b3-protyle-inline-tag-color: #8590a6;
+  --b3-protyle-inline-link-color: #175199;
+}
+html[data-theme-mode="dark"] {
+  --b3-protyle-inline-blockref-color: #f00;
+  --b3-protyle-inline-fileref-color: #f00;
+  --b3-protyle-inline-link-color: #f00;
+}
+html[data-theme-mode="green"] {
+  --b3-protyle-inline-blockref-color: #175199;
+  --b3-protyle-inline-tag-color: #8590a6;
+  --b3-protyle-inline-link-color: #175199;
+}
+.protyle-background__tags {
+  margin-left: 36px !important;
+}
+.protyle-background__iconw {
+  left: 54px !important;
+}
+.protyle-title {
+  margin-top: 0 !important;
+  margin-left: 48px !important;
+  margin-right: 48px !important;
+}
+.protyle-wysiwyg {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+.protyle-wysiwyg--attr {
+  padding-top: 0 !important;
+}
+.b3-typography blockquote,
+.b3-typography .bq,
+.protyle-wysiwyg blockquote,
+.protyle-wysiwyg .bq {
+  background-color: transparent;
+}

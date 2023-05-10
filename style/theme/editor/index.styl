@@ -23,28 +23,40 @@
  * questions.
  */
 
-// 基本变量
-// vars-zhi = vars-common + 自定义变量
-@import "../common/vars/vars-zhi"
+@import "./editor-light.styl"
+@import "./editor-dark.styl"
+@import "./editor-green.styl"
 
-// web字体
-// fonts = lxgw + opensans
-@import "../common/fonts"
+// 标签与左侧间距
+.protyle-background__tags
+  margin-left 36px !important
 
-// ---------------------------------------------------------------------------------------------------------------------
+// 标签操作按钮
+// .protyle-icons
+//   opacity 1
 
-// 整体背景、字体颜色
-@import "./basic"
+// 背景间距
+.protyle-background__iconw
+  left 54px !important
 
-// 代码块
-@import "./code-block"
+// 标题与编辑器左侧间距
+.protyle-title
+  margin-top 0 !important
+  margin-left 48px !important
+  margin-right 48px !important
 
-// 闪卡
-@import "./deck"
+// 正文左右间距
+.protyle-wysiwyg
+  padding-left 48px !important
+  padding-right 48px !important
 
-// 移动端
-@import "./mobile"
+// 正文标题间距
+.protyle-wysiwyg--attr
+  padding-top 0 !important
 
-// 编辑器
-@import "./editor"
-
+// 引述
+.b3-typography blockquote
+.b3-typography .bq
+.protyle-wysiwyg blockquote
+.protyle-wysiwyg .bq
+  background-color transparent
