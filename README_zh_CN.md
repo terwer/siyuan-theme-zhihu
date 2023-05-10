@@ -4,6 +4,8 @@
 
 一款知乎风格的思源笔记主题
 
+![](https://raw.githubusercontent.com/terwer/zhihu-theme/main/icon.png)
+
 > ⚠️ 特别提醒: 此主题当前为前期可用版本，功能上尚不全面，欢迎 [新建issue](https://github.com/terwer/zhihu-theme/issues/new)
 > 提出宝贵意见。此版本特性，请参照 [核心特色](#核心特色) 。
 

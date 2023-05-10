@@ -4,7 +4,7 @@
 
 A siyuan-note theme inspired by zhihu
 
-![](./icon.png)
+![](https://raw.githubusercontent.com/terwer/zhihu-theme/main/icon.png)
 
 > ⚠️ WARNING: Current version in the early stage, and the function is not comprehensive yet. Valuable opinions through [issue](https://github.com/terwer/zhihu-theme/issues/new) is welcome. Please refer to [Core Features](#core-features) for this version's characteristics.
 
