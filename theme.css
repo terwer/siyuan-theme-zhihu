@@ -23,6 +23,33 @@
  * questions.
  */
 @import '/appearance/themes/Zhihu/style/common/fonts/webfont/webfont.css';
+html[data-theme-mode="light"] {
+  --b3-theme-surface: #f4f4f4;
+  --b3-theme-background: #fff;
+  --b3-theme-background-light: rgba(255,255,255,0.8);
+  --b3-theme-primary: #121212;
+  --b3-theme-on-background: #121212;
+  --b3-border-color: rgba(0,0,0,0.12);
+  --b3-list-hover: rgba(153,153,153,0.15);
+}
+html[data-theme-mode="dark"] {
+  --b3-theme-surface: #121212;
+  --b3-theme-background: #000;
+  --b3-theme-background-light: rgba(30,30,34,0.8);
+  --b3-theme-primary: #3573f0;
+  --b3-theme-on-background: #9b9baa;
+  --b3-border-color: #30363d;
+  --b3-list-hover: rgba(153,153,153,0.15);
+}
+html[data-theme-mode="green"] {
+  --b3-theme-surface: #ececcc;
+  --b3-theme-background: #f5f5d5;
+  --b3-theme-background-light: rgba(245,245,213,0.8);
+  --b3-theme-primary: #00323c;
+  --b3-theme-on-background: #704214;
+  --b3-border-color: rgba(0,0,0,0.15);
+  --b3-list-hover: rgba(153,153,153,0.15);
+}
 body {
   --b3-font-family: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
   --b3-font-family-code: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
@@ -32,11 +59,183 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  color: var(--zhi-text-color);
+  color: var(--b3-theme-on-background);
 }
 body .b3-label {
   line-height: 22px;
 }
-body {
-  background: #f00;
+html[data-theme-mode="light"] {
+  --zhi-code-tab-bg: #fff;
+  --zhi-code-content-bg: #f8f9fa;
+}
+html[data-theme-mode="dark"] {
+  --zhi-code-tab-bg: #000;
+  --zhi-code-content-bg: #1e1e1e;
+}
+html[data-theme-mode="green"] {
+  --zhi-code-tab-bg: #f5f5d5;
+  --zhi-code-content-bg: rgba(27,31,35,0.05);
+}
+#preview .protyle-action__language {
+  right: 0.2rem !important;
+}
+#preview .protyle-action__language::after {
+  display: none !important;
+}
+#preview .protyle-action__copy {
+  display: none !important;
+}
+html[data-light-theme="Rem Craft"] .b3-typography .code-block,
+html[data-light-theme="Rem Craft"] .protyle-wysiwyg .code-block {
+  background: var(--zhi-code-tab-bg);
+}
+html[data-light-theme="Rem Craft"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="Rem Craft"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  right: 5rem;
+  top: -0.1rem;
+}
+html[data-light-theme="Rem Craft"] .protyle-linenumber__rows {
+  margin-top: 8px !important;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .code-block {
+  overflow: auto;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-action {
+  position: absolute;
+  background-color: var(--custom-popover-function-menu-background-color);
+  backdrop-filter: var(--custom-backdrop-popover-filter);
+  height: 32px;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  right: 2.5rem;
+  top: 0.2rem;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy,
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu {
+  margin-top: 0.3rem;
+}
+html[data-theme-mode="light"][data-light-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-linenumber__rows {
+  padding-top: 0 !important;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .code-block {
+  border-radius: 0 !important;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-action {
+  position: absolute;
+  background: var(--zhi-code-tab-bg);
+  height: 32px;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  right: 2.5rem;
+  top: 0.2rem;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy,
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu {
+  margin-top: 0.3rem;
+}
+html[data-theme-mode="dark"][data-dark-theme="Dark+"] .protyle-wysiwyg [data-node-id].code-block > .protyle-linenumber__rows {
+  padding-top: 0 !important;
+}
+html[data-light-theme="HBuilderX-Light"] {
+  overflow: auto;
+}
+html[data-light-theme="HBuilderX-Light"] .code-block {
+  overflow: auto;
+}
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg [data-node-id].code-block > .protyle-action {
+  height: 28px;
+}
+html[data-light-theme="HBuilderX-Light"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  top: 0.5rem;
+  right: 3rem;
+}
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy,
+html[data-light-theme="HBuilderX-Light"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__menu {
+  margin-top: 0.2rem;
+}
+html[data-light-theme="Savor"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="Savor"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  top: 0.2rem;
+}
+html[data-light-theme="Sofill-"] .code-block::after {
+  top: 0.7rem !important;
+}
+html[data-light-theme="Sofill-"] .b3-typography .code-block .protyle-action .protyle-action__language,
+html[data-light-theme="Sofill-"] .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  top: -0.1rem;
+  left: unset !important;
+  right: 0.2rem;
+}
+.code-block {
+  border: 0.5px solid var(--b3-border-color) !important;
+  border-radius: 5px !important;
+  padding-top: 32px !important;
+  background: var(--zhi-code-tab-bg);
+}
+.b3-typography div.hljs,
+.protyle-wysiwyg div.hljs {
+  color: var(--b3-theme-on-background);
+  padding: 8px;
+  font-family: var(--b3-font-family-code);
+  border-top: 0.5px solid var(--b3-border-color);
+  border-radius: 0 0 5px 5px !important;
+  background: var(--zhi-code-content-bg);
+}
+.code-block::after {
+  content: " ";
+  position: absolute;
+  background: #fa625c;
+  box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+  border-radius: 50%;
+  top: 9px !important;
+  left: 8px !important;
+  height: 12px !important;
+  width: 12px !important;
+  z-index: 1;
+}
+.protyle-linenumber__rows {
+  margin-top: 32px !important;
+  padding: 4px;
+  background-color: var(--b3-theme-background) !important;
+  margin-bottom: 0;
+  font-family: var(--b3-font-family-code);
+  border-top-left-radius: 4px;
+}
+.protyle-linenumber__rows span::before {
+  color: #808007;
+}
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  margin-top: 0;
+  position: absolute;
+  right: 3.5em;
+  border-radius: 1px;
+  opacity: 1 !important;
+  font-family: var(--b3-font-family-code);
+}
+.b3-typography .code-block .protyle-action .protyle-action__language::after,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
+  content: "›";
+  font-family: var(--b3-font-family-code);
+  color: rgba(128,128,128,0.502);
+  opacity: 1;
+}
+code.hljs {
+  border: 1px solid var(--b3-border-color1);
+}
+.b3-typography .code-block .protyle-action .protyle-icon,
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+.b3-typography .code-block .protyle-action .protyle-icon svg,
+.b3-typography .code-block .protyle-action .protyle-action__language svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
+  color: #808080;
 }
