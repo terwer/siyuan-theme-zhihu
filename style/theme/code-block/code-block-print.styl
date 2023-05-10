@@ -23,25 +23,13 @@
  * questions.
  */
 
-// 基本变量
-// vars-zhi = vars-common + 自定义变量
-@import "../common/vars/vars-zhi"
+// -------------------------------------------------代码块-打印模式---------------------------------------------------
+#preview
+  .protyle-action__language
+    right 0.2rem !important
 
-// web字体
-// fonts = lxgw + opensans
-@import "../common/fonts"
+  .protyle-action__language::after
+    display none !important
 
-// ---------------------------------------------------------------------------------------------------------------------
-
-// 整体背景、字体颜色
-@import "./basic"
-
-// 代码块
-@import "./code-block"
-
-// 闪卡
-@import "./deck"
-
-// 移动端
-@import "./mobile"
-
+  .protyle-action__copy
+    display none !important
