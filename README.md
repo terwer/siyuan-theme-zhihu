@@ -14,9 +14,8 @@ The theme is inspired by `Zhihu` but not limited to its style. The appearance op
 to:
 
 - [X] Font style beautification, using `Open Sans` for English and `LXGW WenKai` for Chinese
-- [ ] Background color optimization, overall layout and spacing optimization
-- [ ] Code block beautification, similar to the Mac window style
-- [ ] Other features is on the way...
+- [X] Background color optimization, overall layout and spacing optimization
+- [X] Code block beautification, similar to the Mac window style
 - [ ] Editor (core optimization point)
 - [ ] Toolbar
 - [ ] Tab bar, mimicking Chrome style
