@@ -28,14 +28,9 @@
 @import "code-block-dark"
 @import "code-block-green"
 @import "code-block-print"
-@import "code-block-rem-craft"
-@import "code-block-dark-plus-plus"
-@import "code-block-hbuildx-light"
-@import "code-block-savor"
-@import "code-block-sofill"
 
 .code-block
-  border 0.5px solid var(--zhi-border-color) !important
+  border 0.5px solid var(--b3-border-color) !important
   border-radius 5px !important
   padding-top 32px !important
   background var(--zhi-code-tab-bg)
@@ -43,9 +38,10 @@
 // 代码块编辑区域/正文内容
 .b3-typography div.hljs
 .protyle-wysiwyg div.hljs
+  color var(--b3-theme-on-background)
   padding 8px
-  font-family var(--zhi-font-family-code)
-  border-top 0.5px solid var(--zhi-border-color)
+  font-family var(--b3-font-family-code)
+  border-top 0.5px solid var(--b3-border-color)
   border-radius 0 0 5px 5px !important
   background var(--zhi-code-content-bg)
 
@@ -55,7 +51,7 @@
   position absolute
   background #fa625c
   box-shadow 23px 0 #fdbc40, 45px 0 #35cd4b
-  border-radius var(--zhi-border-radius-round)
+  border-radius _border-radius-round
   top 9px !important
   left 8px !important
   height 12px !important
@@ -68,7 +64,7 @@
   padding 4px
   background-color var(--b3-theme-background) !important
   margin-bottom 0
-  font-family var(--zhi-font-family-code)
+  font-family var(--b3-font-family-code)
   border-top-left-radius 4px
 
 // 代码块行数的文字颜色
@@ -83,18 +79,18 @@
   right 3.5em
   border-radius 1px
   opacity 1 !important
-  font-family var(--zhi-font-family-code)
+  font-family var(--b3-font-family-code)
 
 .b3-typography .code-block .protyle-action .protyle-action__language::after
 .protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after
   content "›"
-  font-family var(--zhi-font-family-code)
+  font-family var(--b3-font-family-code)
   color #80808080
   opacity 1
 
 // ————————————————————————————————集市里边代码块的主题——————————————————————————————
 code.hljs
-  border 1px solid var(--zhi-border-color1)
+  border 1px solid var(--b3-border-color1)
 
 // 复制和设置按钮样式
 .b3-typography .code-block .protyle-action .protyle-icon

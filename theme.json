@@ -1,14 +1,14 @@
 {
-  "name": "zhihu-theme",
+  "name": "Zhihu",
   "author": "terwer",
   "url": "https://github.com/terwer/zhihu-theme",
   "displayName": {
     "default": "Zhihu",
-    "zh_CN": "Zhihu"
+    "zh_CN": "知乎"
   },
   "description": {
-    "default": "A siyuan-note theme inspired by zhihu",
-    "zh_CN": "一款知乎风格的思源笔记主题"
+    "default": "Zhihu style, focusing on creating a clean and comfortable creative experience",
+    "zh_CN": "知乎风格，专注于打造干净、舒适的创作体验"
   },
   "readme": {
     "default": "README.md",

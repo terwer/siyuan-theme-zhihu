@@ -31,6 +31,9 @@
     "@terwer/eslint-config-custom": "latest",
     "@types/node": "18",
     "minimist": "^1.2.8",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-stylus": "^0.18.0",
     "stylus": "^0.59.0",
     "ts-node": "^10.9.1"
   }

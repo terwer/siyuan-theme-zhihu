@@ -23,6 +23,10 @@
  * questions.
  */
 
+@import "./editor-light.styl"
+@import "./editor-dark.styl"
+@import "./editor-green.styl"
+
 // 标签与左侧间距
 .protyle-background__tags
   margin-left 36px !important
@@ -46,11 +50,13 @@
   padding-left 48px !important
   padding-right 48px !important
 
- // 正文标题间距
+// 正文标题间距
 .protyle-wysiwyg--attr
   padding-top 0 !important
 
 // 引述
-.b3-typography blockquote, .b3-typography .bq
-.protyle-wysiwyg blockquote, .protyle-wysiwyg .bq
-  background-color: transparent
+.b3-typography blockquote
+.b3-typography .bq
+.protyle-wysiwyg blockquote
+.protyle-wysiwyg .bq
+  background-color transparent
