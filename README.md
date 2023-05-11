@@ -15,8 +15,16 @@ to:
 
 - [X] Font style beautification, using `Open Sans` for English and `LXGW WenKai` for Chinese
 - [ ] Background color optimization, overall layout and spacing optimization
-- [ ]Code block beautification, similar to the Mac window style
+- [ ] Code block beautification, similar to the Mac window style
 - [ ] Other features is on the way...
+- [ ] Editor (core optimization point)
+- [ ] Toolbar
+- [ ] Tab bar, mimicking Chrome style
+- [ ] Document tree
+- [ ] Left panel, Right panel, Bottom panel
+- [ ] Market
+- [ ] Flash card
+- [ ] More features are under continuous development...
 
 <hr/>
 
