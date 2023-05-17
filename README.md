@@ -48,3 +48,20 @@ to:
   ```
 
   If you need to cancel, disable this js fragment and restart Siyuan.
+
+## Donate
+
+If you approve of this project, invite me to have a cup of coffee, which will encourage me to keep updating and create
+more useful tools~
+
+### Wechat
+
+<div>
+<img src="https://static-rs-terwer.oss-cn-beijing.aliyuncs.com/donate/wechat.jpg" alt="wechat" style="width:280px;height:375px;" />
+</div>
+
+### Alipay
+
+<div>
+<img src="https://static-rs-terwer.oss-cn-beijing.aliyuncs.com/donate/alipay.jpg" alt="alipay" style="width:280px;height:375px;" />
+</div>
