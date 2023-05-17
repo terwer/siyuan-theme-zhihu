@@ -1,10 +1,10 @@
 [中文](https://github.com/terwer/zhihu-theme/blob/main/README_zh_CN.md)
 
-# zhihu-theme
-
-A siyuan-note theme inspired by zhihu
+# Zhihu
 
 ![](https://raw.githubusercontent.com/terwer/zhihu-theme/main/icon.png)
+
+A siyuan-note theme inspired by zhihu
 
 > ⚠️ WARNING: Current version in the early stage, and the function is not comprehensive yet. Valuable opinions through [issue](https://github.com/terwer/zhihu-theme/issues/new) is welcome. Please refer to [Core Features](#core-features) for this version's characteristics.
 
