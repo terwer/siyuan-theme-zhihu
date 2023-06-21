@@ -1,12 +1,12 @@
-[English](https://github.com/terwer/zhihu-theme/blob/main/README.md)
+[English](https://github.com/terwer/siyuan-theme-zhihu/blob/main/README.md)
 
 # 知乎主题
 
 一款知乎风格的思源笔记主题
 
-![](https://raw.githubusercontent.com/terwer/zhihu-theme/main/icon.png)
+![](https://raw.githubusercontent.com/terwer/siyuan-theme-zhihu/main/icon.png)
 
-> ⚠️ 特别提醒: 此主题当前为前期可用版本，功能上尚不全面，欢迎 [新建issue](https://github.com/terwer/zhihu-theme/issues/new)
+> ⚠️ 特别提醒: 此主题当前为前期可用版本，功能上尚不全面，欢迎 [新建issue](https://github.com/terwer/siyuan-theme-zhihu/issues/new)
 > 提出宝贵意见。此版本特性，请参照 [核心特色](#核心特色) 。
 
 ## 核心特色
@@ -48,3 +48,19 @@
   ```
 
   如需取消，禁用此 js 片段，重启思源即可。
+
+## 捐赠
+
+如果您认可这个项目，请我喝一杯咖啡吧，这将鼓励我持续更新，并创作出更多好用的工具~
+
+### 微信
+
+<div>
+<img src="https://static-rs-terwer.oss-cn-beijing.aliyuncs.com/donate/wechat.jpg" alt="wechat" style="width:280px;height:375px;" />
+</div>
+
+### 支付宝
+
+<div>
+<img src="https://static-rs-terwer.oss-cn-beijing.aliyuncs.com/donate/alipay.jpg" alt="alipay" style="width:280px;height:375px;" />
+</div>
