@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.7](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.6...v0.0.7) (2023-06-21)
+
+
+### Bug Fixes
+
+* 修复浅色模式下超链接不明显的问题 ([787492e](https://github.com/terwer/siyuan-theme-zhihu/commit/787492e2bff07f5754669a705c89e6fe9592a875))
+* 修复浅色模式下超链接不明显的问题 ([c330d17](https://github.com/terwer/siyuan-theme-zhihu/commit/c330d17758729a1de42975260691b01e8aaca9c4))
+
 ## [0.0.6](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.5...v0.0.6) (2023-05-17)
 ### Features
 * 主题重构 ([76d8d39](https://github.com/terwer/siyuan-theme-zhihu/commit/76d8d39b06311888fd4448730dda27908b5b5cd1))
