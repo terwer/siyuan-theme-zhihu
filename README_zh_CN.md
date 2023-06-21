@@ -6,8 +6,7 @@
 
 ![](https://raw.githubusercontent.com/terwer/siyuan-theme-zhihu/main/icon.png)
 
-> ⚠️ 特别提醒: 此主题当前为前期可用版本，功能上尚不全面，欢迎 [新建issue](https://github.com/terwer/siyuan-theme-zhihu/issues/new)
-> 提出宝贵意见。此版本特性，请参照 [核心特色](#核心特色) 。
+> ⚠️ 特别提醒: 此主题当前为前期可用版本，功能上尚不全面，欢迎 [新建issue](https://github.com/terwer/siyuan-theme-zhihu/issues/new) 提出宝贵意见。 。
 
 ## 核心特色
 
