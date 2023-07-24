@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.8](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.7...v0.0.8) (2023-07-24)
+
+
+### Bug Fixes
+
+* [#77](https://github.com/terwer/siyuan-theme-zhihu/issues/77) 修复 分割线与白色背景颜色相近难以辨认 ([993e5fa](https://github.com/terwer/siyuan-theme-zhihu/commit/993e5fa919bd68cb0668d236314db58b4f63d406))
+* 优化闪卡样式 ([f0d1da2](https://github.com/terwer/siyuan-theme-zhihu/commit/f0d1da25dab6efa22b068b34f66ee691b84778fe))
+* 增大编辑器左侧间距，防止菜单被遮挡 ([2dff1a6](https://github.com/terwer/siyuan-theme-zhihu/commit/2dff1a61b6fb5e5cbf71e76162865eda738b8449))
+
 ## [0.0.7](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.6...v0.0.7) (2023-06-21)
 
 
