@@ -23,5 +23,32 @@
  * questions.
  */
 
+.card__block .protyle-wysiwyg .p[data-node-id][custom-riff-decks]
+  margin-top 12px
+
 .protyle-wysiwyg .p[data-node-id][custom-riff-decks]
-  box-shadow none !important
+  border-left none
+  border-radius 2px
+  box-shadow 0 0 0.5em 0.1em #dce1e7
+  // box-shadow none
+  background-clip padding-box
+  &::before
+    content ""
+    position absolute
+    top 0
+    left 0
+    width 0.15em
+    height 100%
+    background-color #00c853
+
+.protyle-wysiwyg span[data-type="mark"]
+  padding 2px 8px
+  margin-right 4px
+  margin-left 4px
+  color var(--b3-card-success-color)
+  background-color var(--b3-card-success-background)
+  border-radius 5px
+  font-size 12px
+
+
+
