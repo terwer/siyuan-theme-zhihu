@@ -3,7 +3,6 @@
 ## [0.0.10](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.9...v0.0.10) (2023-07-24)
 ### Bug Fixes
 * 还原成闪卡向外的阴影 ([ff2337d](https://github.com/terwer/siyuan-theme-zhihu/commit/ff2337d23522a700079c8bd6696d5bfadc85f4f7))
-* 闪卡向外的阴影 ([628e55b](https://github.com/terwer/siyuan-theme-zhihu/commit/628e55b2f54b8f1314003fd7a77e564ef1b7165d))
 ## [0.0.9](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.8...v0.0.9) (2023-07-24)
 ### Features
 * zhi-mini 主流程加载 ([9e8692d](https://github.com/terwer/siyuan-theme-zhihu/commit/9e8692dea84a54c52456c9315a93161b05d2c208))
