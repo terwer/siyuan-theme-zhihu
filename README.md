@@ -17,12 +17,15 @@ to:
 - [X] Background color optimization, overall layout and spacing optimization
 - [X] Code block beautification, similar to the Mac window style
 - [ ] Editor (core optimization point)
+  - [X] Spacing optimization
+  - [X] HR horizontal line
 - [ ] Toolbar
 - [ ] Tab bar, mimicking Chrome style
 - [ ] Document tree
 - [ ] Left panel, Right panel, Bottom panel
 - [ ] Market
 - [ ] Flash card
+  - [X] Flash card marker style
 - [ ] More features are under continuous development...
 
 <hr/>
