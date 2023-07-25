@@ -26,6 +26,7 @@
 @import "./deck-light.styl"
 @import "./deck-dark.styl"
 
+// 挖空制卡
 .card__block .protyle-wysiwyg .p[data-node-id][custom-riff-decks]
   margin-top 12px
 .protyle-wysiwyg .p[data-node-id][custom-riff-decks]
@@ -52,6 +53,44 @@
   background-color var(--b3-card-success-background)
   border-radius 5px
   font-size 12px
+
+// 列表制卡
+.card__block .protyle-wysiwyg .li[data-node-id][custom-riff-decks]
+  margin-top 12px
+.protyle-wysiwyg .li[data-node-id][custom-riff-decks]
+  border-left none
+  border-radius 2px
+  box-shadow 0 0 5px 2px #ff6a6a
+  padding 12px
+  background-clip padding-box
+  &::before
+    content ""
+    position absolute
+    top 0
+    left 0
+    width 0.15em
+    height 100%
+    background-color #ff6a6a
+    box-shadow 0 0 5px 2px var(--b3-card-warning-background)
+
+// 超级块制卡
+.card__block .protyle-wysiwyg div[data-type="NodeSuperBlock"][data-node-id][custom-riff-decks]
+  margin-top 12px
+.protyle-wysiwyg div[data-type="NodeSuperBlock"][data-node-id][custom-riff-decks]
+  border-left none
+  border-radius 2px
+  box-shadow 0 0 5px 2px #7c4dff
+  padding 12px
+  background-clip padding-box
+  &::before
+    content ""
+    position absolute
+    top 0
+    left 0
+    width 0.15em
+    height 100%
+    background-color #7c4dff
+    box-shadow 0 0 5px 2px var(--b3-card-info-background)
 
 
 
