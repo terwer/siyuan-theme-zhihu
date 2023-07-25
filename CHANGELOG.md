@@ -1,7 +1,9 @@
 # Changelog
 
-## [0.0.10](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.9...v0.0.10) (2023-07-24)
+## [0.0.11](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.10...v0.0.11) (2023-07-25)
 ### Bug Fixes
+* 优化列表制卡和超级块制卡样式 ([2bddcd4](https://github.com/terwer/siyuan-theme-zhihu/commit/2bddcd44b525ce9b0959359d1d7f791dd67e7c26))
+## [0.0.10](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.9...v0.0.10) (2023-07-24)
 * 还原成闪卡向外的阴影 ([ff2337d](https://github.com/terwer/siyuan-theme-zhihu/commit/ff2337d23522a700079c8bd6696d5bfadc85f4f7))
 ## [0.0.9](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.8...v0.0.9) (2023-07-24)
 ### Features
