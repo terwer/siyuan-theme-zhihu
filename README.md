@@ -26,6 +26,8 @@ to:
 - [ ] Market
 - [ ] Flash card
   - [X] Flash card marker style
+  - [X] List business card printing
+  - [X] Super block business card printing
 - [ ] More features are under continuous development...
 
 <hr/>
