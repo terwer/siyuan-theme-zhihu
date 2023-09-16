@@ -1,7 +1,9 @@
 # Changelog
 
-## [0.0.11](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.10...v0.0.11) (2023-07-25)
+## [0.0.12](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.11...v0.0.12) (2023-09-16)
 ### Bug Fixes
+* 适配Jupyter插件 ([e79578a](https://github.com/terwer/siyuan-theme-zhihu/commit/e79578a66c09ad0fa2d413115deebf3455d64d74))
+## [0.0.11](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.10...v0.0.11) (2023-07-25)
 * 优化列表制卡和超级块制卡样式 ([2bddcd4](https://github.com/terwer/siyuan-theme-zhihu/commit/2bddcd44b525ce9b0959359d1d7f791dd67e7c26))
 ## [0.0.10](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.9...v0.0.10) (2023-07-24)
 * 还原成闪卡向外的阴影 ([ff2337d](https://github.com/terwer/siyuan-theme-zhihu/commit/ff2337d23522a700079c8bd6696d5bfadc85f4f7))
