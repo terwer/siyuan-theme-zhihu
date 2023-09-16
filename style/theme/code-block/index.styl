@@ -46,18 +46,25 @@
   background var(--zhi-code-content-bg)
 
 // 设置顶部三个mac按钮样式
-.code-block::after
+.code-block .protyle-action::after
   content " "
   position absolute
   background #fa625c
   box-shadow 23px 0 #fdbc40, 45px 0 #35cd4b
   border-radius _border-radius-round
-  top 9px !important
+  top 5px !important
   left 8px !important
   height 12px !important
   width 12px  !important
   z-index 1
 
+.protyle-wysiwyg [data-node-id][custom-jupyter-block-type][custom-jupyter-block-type=code]:after
+  top 5px
+  left 8.5em
+
+.protyle-wysiwyg [data-node-id][custom-jupyter-block-type][custom-jupyter-block-type=code]:before
+  top 9px
+  left 7.5em
 //  ————————————————————————————————————代码块行数——————————————————————————————————
 .protyle-linenumber__rows
   margin-top 32px !important
