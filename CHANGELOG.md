@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.0.13](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.12...v0.0.13) (2023-11-03)
+
+
+### Features
+
+* 新增开发软连接 ([2223f10](https://github.com/terwer/siyuan-theme-zhihu/commit/2223f10285c69695b91282140dcb54111653f92b))
+* 新增开发软连接 ([c254730](https://github.com/terwer/siyuan-theme-zhihu/commit/c254730ac658116ea75f29a1f269a5e04a12c31b))
+
+
+### Bug Fixes
+
+* [#83](https://github.com/terwer/siyuan-theme-zhihu/issues/83) 代码块的行号不对齐 ([349068f](https://github.com/terwer/siyuan-theme-zhihu/commit/349068f6aeb9782ce28bf0dc323a27da08003946))
+* [#83](https://github.com/terwer/siyuan-theme-zhihu/issues/83) 代码块的行号不对齐 ([41c7d65](https://github.com/terwer/siyuan-theme-zhihu/commit/41c7d65329bae9665022465ea5e1ee599a82acbc))
+* 修复 protyle 字体未生效问题 ([4c02eb7](https://github.com/terwer/siyuan-theme-zhihu/commit/4c02eb7366772566e43c6946510ed6a4d64db816))
+
 ## [0.0.12](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.11...v0.0.12) (2023-09-16)
 ### Bug Fixes
 * 适配Jupyter插件 ([e79578a](https://github.com/terwer/siyuan-theme-zhihu/commit/e79578a66c09ad0fa2d413115deebf3455d64d74))
