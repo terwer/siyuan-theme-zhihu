@@ -1,6 +1,7 @@
 {
   "name": "Zhihu",
   "author": "terwer",
+  "version": "0.0.13",
   "url": "https://github.com/terwer/siyuan-theme-zhihu",
   "displayName": {
     "default": "Zhihu",
@@ -27,6 +28,5 @@
     "light",
     "dark",
     "green"
-  ],
-  "version": "0.0.12"
+  ]
 }
