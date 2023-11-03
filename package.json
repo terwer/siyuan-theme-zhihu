@@ -14,6 +14,7 @@
     "siyuan-note"
   ],
   "scripts": {
+    "makeLink": "node  --no-warnings ./scripts/make_dev_link.js",
     "dev": "stylus --watch theme.styl --out ./theme.css",
     "build": "stylus --compress theme.styl --out ./theme.css",
     "syncVersion": "ts-node-esm --experimental-specifier-resolution=node tools/syncVersion.ts",
