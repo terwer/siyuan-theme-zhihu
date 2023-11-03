@@ -125,12 +125,13 @@ html[data-theme-mode="green"] {
   left: 7.5em;
 }
 .protyle-linenumber__rows {
-  margin-top: 32px !important;
+  width: 40px;
   padding: 4px;
-  background-color: var(--b3-theme-background) !important;
+  padding-top: 8px;
   margin-bottom: 0;
+  border-top: 0.5px solid var(--b3-border-color);
   font-family: var(--b3-font-family-code);
-  border-top-left-radius: 4px;
+  border-top-left-radius: 0;
 }
 .protyle-linenumber__rows span::before {
   color: #808007;
