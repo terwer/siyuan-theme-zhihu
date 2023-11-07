@@ -1,29 +1,20 @@
 # Changelog
 
-## [0.0.13](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.12...v0.0.13) (2023-11-03)
-
-
-### Features
-
-* 新增开发软连接 ([2223f10](https://github.com/terwer/siyuan-theme-zhihu/commit/2223f10285c69695b91282140dcb54111653f92b))
-* 新增开发软连接 ([c254730](https://github.com/terwer/siyuan-theme-zhihu/commit/c254730ac658116ea75f29a1f269a5e04a12c31b))
-
-
+## [0.0.14](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.13...v0.0.14) (2023-11-07)
 ### Bug Fixes
-
-* [#83](https://github.com/terwer/siyuan-theme-zhihu/issues/83) 代码块的行号不对齐 ([349068f](https://github.com/terwer/siyuan-theme-zhihu/commit/349068f6aeb9782ce28bf0dc323a27da08003946))
+* 修复引述样式问题 ([6aca42d](https://github.com/terwer/siyuan-theme-zhihu/commit/6aca42d86f1c2d0c1cc81472784d49aab8b7b3f9))
+## [0.0.13](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.12...v0.0.13) (2023-11-03)
+### Features
+* 新增开发软连接 ([c254730](https://github.com/terwer/siyuan-theme-zhihu/commit/c254730ac658116ea75f29a1f269a5e04a12c31b))
 * [#83](https://github.com/terwer/siyuan-theme-zhihu/issues/83) 代码块的行号不对齐 ([41c7d65](https://github.com/terwer/siyuan-theme-zhihu/commit/41c7d65329bae9665022465ea5e1ee599a82acbc))
 * 修复 protyle 字体未生效问题 ([4c02eb7](https://github.com/terwer/siyuan-theme-zhihu/commit/4c02eb7366772566e43c6946510ed6a4d64db816))
-
 ## [0.0.12](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.11...v0.0.12) (2023-09-16)
-### Bug Fixes
 * 适配Jupyter插件 ([e79578a](https://github.com/terwer/siyuan-theme-zhihu/commit/e79578a66c09ad0fa2d413115deebf3455d64d74))
 ## [0.0.11](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.10...v0.0.11) (2023-07-25)
 * 优化列表制卡和超级块制卡样式 ([2bddcd4](https://github.com/terwer/siyuan-theme-zhihu/commit/2bddcd44b525ce9b0959359d1d7f791dd67e7c26))
 ## [0.0.10](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.9...v0.0.10) (2023-07-24)
 * 还原成闪卡向外的阴影 ([ff2337d](https://github.com/terwer/siyuan-theme-zhihu/commit/ff2337d23522a700079c8bd6696d5bfadc85f4f7))
 ## [0.0.9](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.8...v0.0.9) (2023-07-24)
-### Features
 * zhi-mini 主流程加载 ([9e8692d](https://github.com/terwer/siyuan-theme-zhihu/commit/9e8692dea84a54c52456c9315a93161b05d2c208))
 * 主题重构 ([76d8d39](https://github.com/terwer/siyuan-theme-zhihu/commit/76d8d39b06311888fd4448730dda27908b5b5cd1))
 * 代码块c插件视适配 ([3a32b3e](https://github.com/terwer/siyuan-theme-zhihu/commit/3a32b3e8688fea014aa08959bf42bad1a965793c))
