@@ -19,6 +19,7 @@ to:
 - [ ] Editor (core optimization point)
   - [X] Spacing optimization
   - [X] HR horizontal line
+  - [X] Blockquote
 - [ ] Toolbar
 - [ ] Tab bar, mimicking Chrome style
 - [ ] Document tree
