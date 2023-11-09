@@ -51,12 +51,12 @@ html[data-theme-mode="green"] {
   --b3-list-hover: rgba(153,153,153,0.15);
 }
 body {
-  --b3-font-family: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-code: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-graph: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-emoji: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-math: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-protyle: "Open Sans", "LXGW WenKai", "JetBrains Mono", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-code: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-graph: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-emoji: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-math: "KaTeX_Main", "Times New Roman", "serif", "JetBrains Mono", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-protyle: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
   font-size: 16px;
   margin: 0;
   padding: 0;
