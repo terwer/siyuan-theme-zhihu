@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.15](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.14...v0.0.15) (2023-11-09)
+
+
+### Bug Fixes
+
+* 公式字体默认使用 KaTeX_Main ([4a37f46](https://github.com/terwer/siyuan-theme-zhihu/commit/4a37f46cbc4e814e790794e99272dc02db21eed4))
+
 ## [0.0.14](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.13...v0.0.14) (2023-11-07)
 ### Bug Fixes
 * 修复引述样式问题 ([6aca42d](https://github.com/terwer/siyuan-theme-zhihu/commit/6aca42d86f1c2d0c1cc81472784d49aab8b7b3f9))
