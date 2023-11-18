@@ -23,25 +23,26 @@
  * questions.
  */
 
-@media screen and (min-width 1px) and (max-width 719px)
-  // 竖屏
-  .protyle-background
-    min-height 32px !important
-    padding-bottom 0 !important
+// 适配移动端
+@media only screen and (max-width: 825px)
+  //.protyle-icons
+  //  opacity 0.86 !important
 
-  .protyle-icons
-    opacity 0.86 !important
+  // 标签与左侧间距
+  .protyle-background__tags
+    margin-left 16px !important
 
-  // .protyle-background__icon
-  //     display: none
-
+  // 背景间距
   .protyle-background__iconw
     left 16px !important
 
+  // 标题与编辑器左侧间距
   .protyle-title
+    margin-top unset !important
     margin-left 16px !important
     margin-right 16px !important
 
+  // 正文左右间距
   .protyle-wysiwyg
     padding-left 16px !important
     padding-right 16px !important
