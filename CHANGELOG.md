@@ -1,12 +1,18 @@
 # Changelog
 
-## [0.0.15](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.14...v0.0.15) (2023-11-09)
+## [0.1.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.15...v0.1.0) (2023-11-18)
+### Features
+* 修复插件自定义字体失效问题 ([41f37af](https://github.com/terwer/siyuan-theme-zhihu/commit/41f37af22695164be1248e03795236b799a6c606))
+* 重构公共样式 ([63251ba](https://github.com/terwer/siyuan-theme-zhihu/commit/63251ba6ec9baa20f7e9df43ede47897ae53f41d))
 ### Bug Fixes
+* [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([712d13f](https://github.com/terwer/siyuan-theme-zhihu/commit/712d13fb6cad85d034ebffaffab7ed181e3bbc87))
+* 修复版本号问题 ([bae4bcb](https://github.com/terwer/siyuan-theme-zhihu/commit/bae4bcb2cb5d7ed95e006ca5c98522c7c1f4f927))
+* 适配移动端 ([2b18f4b](https://github.com/terwer/siyuan-theme-zhihu/commit/2b18f4be07b36960f5b6e9b8fcdf9ede3b4041f9))
+## [0.0.15](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.14...v0.0.15) (2023-11-09)
 * 公式字体默认使用 KaTeX_Main ([4a37f46](https://github.com/terwer/siyuan-theme-zhihu/commit/4a37f46cbc4e814e790794e99272dc02db21eed4))
 ## [0.0.14](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.13...v0.0.14) (2023-11-07)
 * 修复引述样式问题 ([6aca42d](https://github.com/terwer/siyuan-theme-zhihu/commit/6aca42d86f1c2d0c1cc81472784d49aab8b7b3f9))
 ## [0.0.13](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.12...v0.0.13) (2023-11-03)
-### Features
 * 新增开发软连接 ([c254730](https://github.com/terwer/siyuan-theme-zhihu/commit/c254730ac658116ea75f29a1f269a5e04a12c31b))
 * [#83](https://github.com/terwer/siyuan-theme-zhihu/issues/83) 代码块的行号不对齐 ([41c7d65](https://github.com/terwer/siyuan-theme-zhihu/commit/41c7d65329bae9665022465ea5e1ee599a82acbc))
 * 修复 protyle 字体未生效问题 ([4c02eb7](https://github.com/terwer/siyuan-theme-zhihu/commit/4c02eb7366772566e43c6946510ed6a4d64db816))
