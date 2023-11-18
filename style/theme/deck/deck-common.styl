@@ -16,14 +16,15 @@
     background-color #00c853
     box-shadow 0 0 5px 2px var(--b3-card-success-background)
 
-.protyle-wysiwyg span[data-type="mark"]
+.protyle-wysiwyg span[data-type*="mark"]
   padding 2px 8px
   margin-right 4px
   margin-left 4px
   color var(--b3-card-success-color)
   background-color var(--b3-card-success-background)
   border-radius 5px
-  font-size 12px
+  // fix: #101
+  // font-size 12px
 
 // 列表制卡
 .card__block .protyle-wysiwyg .li[data-node-id][custom-riff-decks]
