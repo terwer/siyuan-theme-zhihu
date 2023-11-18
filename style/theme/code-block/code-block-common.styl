@@ -1,0 +1,84 @@
+.code-block
+  border 0.5px solid var(--b3-border-color) !important
+  border-radius 5px !important
+  padding-top 32px !important
+  background var(--zhi-code-tab-bg)
+
+// 代码块编辑区域/正文内容
+.b3-typography div.hljs
+.protyle-wysiwyg div.hljs
+  color var(--b3-theme-on-background)
+  padding 8px
+  font-family var(--b3-font-family-code)
+  border-top 0.5px solid var(--b3-border-color)
+  border-radius 0 0 5px 5px !important
+  background var(--zhi-code-content-bg)
+
+// 设置顶部三个mac按钮样式
+.code-block .protyle-action::after
+  content " "
+  position absolute
+  background #fa625c
+  box-shadow 23px 0 #fdbc40, 45px 0 #35cd4b
+  border-radius _border-radius-round
+  top 5px !important
+  left 8px !important
+  height 12px !important
+  width 12px  !important
+  z-index 1
+
+.protyle-wysiwyg [data-node-id][custom-jupyter-block-type][custom-jupyter-block-type=code]:after
+  top 5px
+  left 8.5em
+
+.protyle-wysiwyg [data-node-id][custom-jupyter-block-type][custom-jupyter-block-type=code]:before
+  top 9px
+  left 7.5em
+//  ————————————————————————————————————代码块行数——————————————————————————————————
+.protyle-linenumber__rows
+  width 40px
+  padding 4px
+  padding-top 8px
+  margin-bottom 0
+  border-top 0.5px solid var(--b3-border-color)
+  font-family var(--b3-font-family-code)
+  border-top-left-radius 0
+
+// 代码块行数的文字颜色
+.protyle-linenumber__rows span::before
+  color rgb(128 128 128 / 50%)
+
+// 代码块的语言代码
+.b3-typography .code-block .protyle-action .protyle-action__language
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language
+  margin-top 0
+  position absolute
+  right 3.5em
+  border-radius 1px
+  opacity 1 !important
+  font-family var(--b3-font-family-code)
+
+.b3-typography .code-block .protyle-action .protyle-action__language::after
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after
+  content "›"
+  font-family var(--b3-font-family-code)
+  color #80808080
+  opacity 1
+
+// ————————————————————————————————集市里边代码块的主题——————————————————————————————
+code.hljs
+  border 1px solid var(--b3-border-color1)
+
+// 复制和设置按钮样式
+.b3-typography .code-block .protyle-action .protyle-icon
+.b3-typography .code-block .protyle-action .protyle-action__language
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language
+  opacity 1 !important
+  background-color transparent !important
+
+.b3-typography .code-block .protyle-action .protyle-icon svg
+.b3-typography .code-block .protyle-action .protyle-action__language svg
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg
+  color gray
