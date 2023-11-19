@@ -1,19 +1,13 @@
 # Changelog
 
 ## [0.1.1](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.0...v0.1.1) (2023-11-19)
-
-
 ### Bug Fixes
-
-* [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([bb8efc5](https://github.com/terwer/siyuan-theme-zhihu/commit/bb8efc521d1c956004fa0570a4e37f2be447b416))
+* [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([712d13f](https://github.com/terwer/siyuan-theme-zhihu/commit/712d13fb6cad85d034ebffaffab7ed181e3bbc87))
 * [#99](https://github.com/terwer/siyuan-theme-zhihu/issues/99) 还原大纲线条默认样式 ([c2fe20a](https://github.com/terwer/siyuan-theme-zhihu/commit/c2fe20a14969452e2d35df739f0e5c51a6df3141))
-
 ## [0.1.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.15...v0.1.0) (2023-11-18)
 ### Features
 * 修复插件自定义字体失效问题 ([41f37af](https://github.com/terwer/siyuan-theme-zhihu/commit/41f37af22695164be1248e03795236b799a6c606))
 * 重构公共样式 ([63251ba](https://github.com/terwer/siyuan-theme-zhihu/commit/63251ba6ec9baa20f7e9df43ede47897ae53f41d))
-### Bug Fixes
-* [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([712d13f](https://github.com/terwer/siyuan-theme-zhihu/commit/712d13fb6cad85d034ebffaffab7ed181e3bbc87))
 * 修复版本号问题 ([bae4bcb](https://github.com/terwer/siyuan-theme-zhihu/commit/bae4bcb2cb5d7ed95e006ca5c98522c7c1f4f927))
 * 适配移动端 ([2b18f4b](https://github.com/terwer/siyuan-theme-zhihu/commit/2b18f4be07b36960f5b6e9b8fcdf9ede3b4041f9))
 ## [0.0.15](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.14...v0.0.15) (2023-11-09)
