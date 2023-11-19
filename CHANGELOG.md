@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.0...v0.1.1) (2023-11-19)
+
+
+### Bug Fixes
+
+* [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([bb8efc5](https://github.com/terwer/siyuan-theme-zhihu/commit/bb8efc521d1c956004fa0570a4e37f2be447b416))
+* [#99](https://github.com/terwer/siyuan-theme-zhihu/issues/99) 还原大纲线条默认样式 ([c2fe20a](https://github.com/terwer/siyuan-theme-zhihu/commit/c2fe20a14969452e2d35df739f0e5c51a6df3141))
+
 ## [0.1.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.15...v0.1.0) (2023-11-18)
 ### Features
 * 修复插件自定义字体失效问题 ([41f37af](https://github.com/terwer/siyuan-theme-zhihu/commit/41f37af22695164be1248e03795236b799a6c606))
