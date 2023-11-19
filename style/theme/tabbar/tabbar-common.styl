@@ -1,0 +1,74 @@
+/* 重置默认样式 */
+*
+  box-sizing border-box
+
+.layout__center [data-type=wnd] {
+  position relative
+  margin 4px
+  border-radius 6px
+  background-color var(--zhi-tabbar-bg)
+  border none
+  //border 1px solid var(--zhi-layput-border)
+}
+
+// Tab栏样式
+.layout__center
+  .layout-tab-bar
+    background-color var(--zhi-tabbar-bg)
+    border none
+
+    &:not(:empty)
+      font-size 13px
+      border-radius 4px
+      height 34px
+      margin 8px 8px 0
+
+    // Tab项样式
+    .item
+      transition all .2s cubic-bezier(0.645, 0.045, 0.355, 1)
+      font-size 13px
+      border-radius 6px 6px 0 0
+      height 34px
+      min-height 0
+      width auto
+      padding 0 4px
+      margin-top 10px
+      flex unset
+      box-shadow unset !important
+      &:after
+        display none
+      // hover效果
+      &:hover
+        background-color var(--zhi-tabbar-item-bg)
+      &:active
+        background-color var(--zhi-tabbar-item-bg)
+      &:not(:first-child)
+          margin-left 8px
+
+
+    .item--focus
+      background-color var(--zhi-tabbar-bg)
+      box-shadow: 0 0 0 1px var(--zhi-layput-border) !important
+      //&:hover
+      //&:focus
+      //&:active
+
+    .item__graphic
+      margin 0
+      width 20px !important
+      height 20px !important
+      padding 5px 5px !important
+      min-width 20px
+
+    .item__text
+      min-width 64px
+      height 34px
+      line-height 34px
+      vertical-align middle
+
+      .item__close:hover
+        background-color: red
+
+.layout-tab-bar--readonly
+  margin-left 0 !important
+  min-width 56px
