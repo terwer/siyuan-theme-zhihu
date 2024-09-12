@@ -37,5 +37,6 @@
     "stylelint-stylus": "^0.18.0",
     "stylus": "^0.59.0",
     "ts-node": "^10.9.1"
-  }
+  },
+  "packageManager": "pnpm@9.9.0"
 }
