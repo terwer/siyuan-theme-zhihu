@@ -1,14 +1,9 @@
 # Changelog
 
 ## [0.1.2](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.1...v0.1.2) (2024-09-12)
-
-
 ### Bug Fixes
-
 * 修复代码快未换行问题 ([2dc2e6b](https://github.com/terwer/siyuan-theme-zhihu/commit/2dc2e6bb827e805b4029869af87b316239fd9c50))
-
 ## [0.1.1](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.0...v0.1.1) (2023-11-19)
-### Bug Fixes
 * [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([712d13f](https://github.com/terwer/siyuan-theme-zhihu/commit/712d13fb6cad85d034ebffaffab7ed181e3bbc87))
 * [#99](https://github.com/terwer/siyuan-theme-zhihu/issues/99) 还原大纲线条默认样式 ([c2fe20a](https://github.com/terwer/siyuan-theme-zhihu/commit/c2fe20a14969452e2d35df739f0e5c51a6df3141))
 ## [0.1.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.15...v0.1.0) (2023-11-18)

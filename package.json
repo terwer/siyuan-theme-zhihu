@@ -17,8 +17,8 @@
     "makeLink": "node  --no-warnings ./scripts/make_dev_link.js",
     "dev": "stylus --watch theme.styl --out ./theme.css",
     "build": "stylus --compress theme.styl --out ./theme.css",
-    "syncVersion": "ts-node-esm --experimental-specifier-resolution=node tools/syncVersion.ts",
-    "parseChangelog": "ts-node-esm --experimental-specifier-resolution=node tools/changelogParser.ts",
+    "syncVersion": "node --experimental-specifier-resolution=node --loader ts-node/esm tools/syncVersion.ts",
+    "parseChangelog": "node --experimental-specifier-resolution=node --loader ts-node/esm tools/changelogParser.ts",
     "prepareRelease": "pnpm syncVersion && pnpm parseChangelog"
   },
   "config": {
