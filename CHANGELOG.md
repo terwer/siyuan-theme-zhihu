@@ -1,7 +1,9 @@
 # Changelog
 
-## [0.1.2](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.1...v0.1.2) (2024-09-12)
+## [0.1.3](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.2...v0.1.3) (2024-11-05)
 ### Bug Fixes
+* 修复代码块间距，兼容思源笔记 3.0.10 ([b4ed835](https://github.com/terwer/siyuan-theme-zhihu/commit/b4ed835e6c5a792b6b8732dc2004f06c9a8cebc1))
+## [0.1.2](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.1...v0.1.2) (2024-09-12)
 * 修复代码快未换行问题 ([2dc2e6b](https://github.com/terwer/siyuan-theme-zhihu/commit/2dc2e6bb827e805b4029869af87b316239fd9c50))
 ## [0.1.1](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.0...v0.1.1) (2023-11-19)
 * [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([712d13f](https://github.com/terwer/siyuan-theme-zhihu/commit/712d13fb6cad85d034ebffaffab7ed181e3bbc87))
