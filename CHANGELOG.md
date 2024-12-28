@@ -1,14 +1,9 @@
 # Changelog
 
 ## [0.1.5](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.4...v0.1.5) (2024-12-28)
-
-
 ### Bug Fixes
-
 * blockquote style for 3.1.17 ([fdcd0cb](https://github.com/terwer/siyuan-theme-zhihu/commit/fdcd0cb536a27bcc9e70c69f00409a98ade33fd5))
-
 ## [0.1.4](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.3...v0.1.4) (2024-11-05)
-### Bug Fixes
 * 修复代码块边框显示异常 ([2e4d2c7](https://github.com/terwer/siyuan-theme-zhihu/commit/2e4d2c7ceec4d04e6d2dcd7b3231426bc96b4601))
 ## [0.1.3](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.2...v0.1.3) (2024-11-05)
 * 修复代码块间距，兼容思源笔记 3.0.10 ([b4ed835](https://github.com/terwer/siyuan-theme-zhihu/commit/b4ed835e6c5a792b6b8732dc2004f06c9a8cebc1))
