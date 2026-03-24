@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.1.6](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.5...v0.1.6) (2026-03-24)
+### Miscellaneous
+* **style:** remove LXGW WenKai font definitions and copyright header ([3e92077](https://github.com/terwer/siyuan-theme-zhihu/commit/3e92077003e38456f1fbe36dfb0062607b4aa6da))
 ## [0.1.5](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.4...v0.1.5) (2024-12-28)
 ### Bug Fixes
 * blockquote style for 3.1.17 ([fdcd0cb](https://github.com/terwer/siyuan-theme-zhihu/commit/fdcd0cb536a27bcc9e70c69f00409a98ade33fd5))
@@ -76,7 +79,6 @@
 * 修复构建脚本 ([7d87eeb](https://github.com/terwer/siyuan-theme-zhihu/commit/7d87eeb58bfc0b29f9cdc6a31e0facb935764f10))
 * 修复浅色模式下超链接不明显的问题 ([c330d17](https://github.com/terwer/siyuan-theme-zhihu/commit/c330d17758729a1de42975260691b01e8aaca9c4))
 * 增大编辑器左侧间距，防止菜单被遮挡 ([2dff1a6](https://github.com/terwer/siyuan-theme-zhihu/commit/2dff1a61b6fb5e5cbf71e76162865eda738b8449))
-### Miscellaneous
 * automated sync version ([b6d7588](https://github.com/terwer/siyuan-theme-zhihu/commit/b6d7588e3647b17ff64b1ea377472d50bd4ac723))
 * **deps-dev:** bump stylelint-config-standard from 30.0.1 to 31.0.0 ([c88afc5](https://github.com/terwer/siyuan-theme-zhihu/commit/c88afc52921d6d429ecabb09d3cfe747cf1f1656))
 * **deps-dev:** bump vitepress from 1.0.0-alpha.50 to 1.0.0-alpha.56 ([1721c2a](https://github.com/terwer/siyuan-theme-zhihu/commit/1721c2a134d729538f7895d8da78be817e69517f))
