@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.5...v0.1.6) (2026-03-24)
+
+
+### Miscellaneous
+
+* **style:** remove LXGW WenKai font definitions and copyright header ([3e92077](https://github.com/terwer/siyuan-theme-zhihu/commit/3e92077003e38456f1fbe36dfb0062607b4aa6da))
+
 ## [0.1.5](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.4...v0.1.5) (2024-12-28)
 ### Bug Fixes
 * blockquote style for 3.1.17 ([fdcd0cb](https://github.com/terwer/siyuan-theme-zhihu/commit/fdcd0cb536a27bcc9e70c69f00409a98ade33fd5))
