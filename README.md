@@ -6,7 +6,7 @@
 
 A siyuan-note theme inspired by zhihu
 
-> ⚠️ WARNING: Current version in the early stage, and the function is not comprehensive yet. Valuable opinions through [issue](https://github.com/terwer/siyuan-theme-zhihu/issues/new) is welcome. 
+> ⚠️ WARNING: Current version in the early stage for self use, and the function is not comprehensive yet. Valuable opinions through [issue](https://github.com/terwer/siyuan-theme-zhihu/issues/new) is welcome. 
 
 ## Core Features
 
