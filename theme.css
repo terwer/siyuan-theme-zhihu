@@ -24,12 +24,30 @@
  */
 @import '/appearance/themes/Zhihu/style/common/fonts/webfont/webfont.css';
 :root {
-  --b3-font-family: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-code: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-graph: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-emoji: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-math: "KaTeX_Main", "Times New Roman", "serif", "JetBrains Mono", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
-  --b3-font-family-protyle: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-code: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-graph: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-emoji: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-math: "KaTeX_Main", "Georgia", "方正北魏楷书简体", "Times New Roman", "serif", "JetBrains Mono", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-protyle: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+}
+:root:lang(zh_CN) {
+  --b3-font-family-base: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-code: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-graph: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-emoji: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-math: "KaTeX_Main", "Georgia", "方正北魏楷书简体", "Times New Roman", "serif", "JetBrains Mono", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-protyle: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+}
+:root:lang(en_US) {
+  --b3-font-family-base: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-code: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-graph: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-emoji: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-math: "KaTeX_Main", "Georgia", "方正北魏楷书简体", "Times New Roman", "serif", "JetBrains Mono", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family-protyle: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
 }
 html {
   font-size: 16px;
@@ -60,7 +78,7 @@ html[data-theme-mode="dark"] {
   --b3-list-hover: rgba(153,153,153,0.15);
 }
 html[data-theme-mode="green"] {
-  --b3-font-family: "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
+  --b3-font-family: "Georgia", "方正北魏楷书简体", "Songti SC", "Open Sans", "LXGW WenKai", "-apple-system", "Microsoft YaHei", "Times New Roman", "方正北魏楷书_GBK";
   --b3-theme-surface: #ececcc;
   --b3-theme-background: #f5f5d5;
   --b3-theme-primary: #00323c;
