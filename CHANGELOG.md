@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.6...v0.1.7) (2026-03-24)
+
+
+### Bug Fixes
+
+* update readme ([3110669](https://github.com/terwer/siyuan-theme-zhihu/commit/3110669b746e5163e61e9224b9621e3ad530dffe))
+
 ## [0.1.6](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.5...v0.1.6) (2026-03-24)
 ### Miscellaneous
 * **style:** remove LXGW WenKai font definitions and copyright header ([3e92077](https://github.com/terwer/siyuan-theme-zhihu/commit/3e92077003e38456f1fbe36dfb0062607b4aa6da))
