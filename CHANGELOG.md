@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.2.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.7...v0.2.0) (2026-03-26)
+### Features
+* **style:** add LXGW WenKai web font with unicode-range subsets ([22dd37a](https://github.com/terwer/siyuan-theme-zhihu/commit/22dd37ad89aac43916d7c035b9059086ed576fea))
 ## [0.1.7](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.6...v0.1.7) (2026-03-24)
 ### Bug Fixes
 * update readme ([3110669](https://github.com/terwer/siyuan-theme-zhihu/commit/3110669b746e5163e61e9224b9621e3ad530dffe))
@@ -18,7 +21,6 @@
 * [#101](https://github.com/terwer/siyuan-theme-zhihu/issues/101) 文字在被标记后，字体大小相比无样式文字过小 ([712d13f](https://github.com/terwer/siyuan-theme-zhihu/commit/712d13fb6cad85d034ebffaffab7ed181e3bbc87))
 * [#99](https://github.com/terwer/siyuan-theme-zhihu/issues/99) 还原大纲线条默认样式 ([c2fe20a](https://github.com/terwer/siyuan-theme-zhihu/commit/c2fe20a14969452e2d35df739f0e5c51a6df3141))
 ## [0.1.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.0.15...v0.1.0) (2023-11-18)
-### Features
 * 修复插件自定义字体失效问题 ([41f37af](https://github.com/terwer/siyuan-theme-zhihu/commit/41f37af22695164be1248e03795236b799a6c606))
 * 重构公共样式 ([63251ba](https://github.com/terwer/siyuan-theme-zhihu/commit/63251ba6ec9baa20f7e9df43ede47897ae53f41d))
 * 修复版本号问题 ([bae4bcb](https://github.com/terwer/siyuan-theme-zhihu/commit/bae4bcb2cb5d7ed95e006ca5c98522c7c1f4f927))
