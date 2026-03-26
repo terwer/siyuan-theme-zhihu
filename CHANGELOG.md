@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.7...v0.2.0) (2026-03-26)
+
+
+### Features
+
+* **style:** add LXGW WenKai web font with unicode-range subsets ([22dd37a](https://github.com/terwer/siyuan-theme-zhihu/commit/22dd37ad89aac43916d7c035b9059086ed576fea))
+
 ## [0.1.7](https://github.com/terwer/siyuan-theme-zhihu/compare/v0.1.6...v0.1.7) (2026-03-24)
 ### Bug Fixes
 * update readme ([3110669](https://github.com/terwer/siyuan-theme-zhihu/commit/3110669b746e5163e61e9224b9621e3ad530dffe))
